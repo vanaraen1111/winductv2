@@ -1190,7 +1190,7 @@ width: 75%;
     right: 20px;
     top: 25px;
 }
-/*
+
 .jumbotron {
     position: relative;
     overflow: hidden;
@@ -1208,29 +1208,17 @@ width: 75%;
 .jumbotron.lg {
     height: 600px;
 }
-.jumbotron h1 .welcome-text {
-    font-size:85px!important;
-    color: white!important;
-	font-weight:bolder!important;
-	font-family: Roboto!important;
-	 text-shadow: -5px 5px 1px #000!important;
-	-webkit-text-stroke-width: 1px!important;
-   -webkit-text-stroke-color: white!important;
-
-}
 
 .jumbotron h1 {
-    font-size:80px!important;
+    font-size:80px;
     color: #FF0004!important;
-	font-weight:bolder!important;
-	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif"!important;
-	 text-shadow: -5px 5px 1px #000!important;
-	-webkit-text-stroke-width: 1px!important;
-   -webkit-text-stroke-color: white!important;
+	font-weight:bolder;
+	font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", "Arial Black", "sans-serif";
+	 text-shadow: -5px 5px 1px #000;
+	-webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: white;
 
-}*/
-
-
+}
 
 .pace .pace-progress {
     background-color: #6d5cae;
@@ -2093,23 +2081,11 @@ h6 {
     color: #2c2c2c;
 }
 
-.welcome-text{
-  color: white!important;
-  font-weight: bold!important;
-  letter-spacing: 2px!important;
-  font-size: 44px!important;
-  line-height: 20px!important;
-  margin-botton: -80px!important;
-
-}
-
 h1 {
     font-size: 44px;
     line-height: 55px;
     letter-spacing: -0.009em;
 }
-
-
 
 h1.mega {
     font-size: 110px;
@@ -2931,7 +2907,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
     white-space: nowrap;
 }
 
-/*.jumbotron p {
+.jumbotron p {
     font-size: 14px;
     font-weight: normal;
     margin-bottom: inherit;
@@ -2939,15 +2915,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', end
 
 .jumbotron p.small {
     font-size: 85%;
-}*/
+}
 
 @media (max-width: 1400px) {
-  /*  .jumbotron h1 {
+    .jumbotron h1 {
         line-height: 55px;
-    }*/
-
-    .welcome-text{
-      line-height: 0px!important;
     }
     h1 {
         font-size: 33px;

@@ -17,7 +17,6 @@ section {
 
 body {
     line-height: 1;
-    font-family: 'Roboto';
 }
 
 ol,
@@ -29,11 +28,6 @@ ul {
     margin-top: 12%;
     margin-bottom: 2%;
     ;
-}
-
-.welcome-text{
-    color: white!important;
-    letter-spacing: 2px!important;
 }
 
 blockquote,
