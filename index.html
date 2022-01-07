@@ -36,6 +36,7 @@
     <meta name="apple-touch-fullscreen" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link href="css/pace-theme-flash.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap5/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="css/swiper.css" rel="stylesheet" type="text/css" media="screen">
@@ -50,11 +51,187 @@
         .cf-invisible {
             visibility: hidden;
         }
-    </style>
-      <script type="text/javascript" async="" src="js/ga.js"></script>
-    <script type="text/javascript" async="" src="js/slideshow.js"></script>
+        * {
+          box-sizing: border-box;
+         }
 
-  </head><body class="pace-dark windows desktop pace-done"> <div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;"> <div class="pace-progress-inner"></div></div><div class="pace-activity"></div></div>
+     /* Position the image container (needed to position the left and right arrows) */
+     .container {
+      position: relative;
+     }
+
+     /* Hide the images by default */
+     .mySlides {
+      display: none;
+     }
+
+     /* Add a pointer when hovering over the thumbnail images */
+     .cursor {
+      cursor: pointer;
+     }
+
+     /* Next & previous buttons */
+     .prev,
+     .next {
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      padding: 16px;
+      margin-top: -50px;
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+      -webkit-user-select: none;
+     }
+
+     /* Position the "next button" to the right */
+     .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+     }
+
+     /* On hover, add a black background color with a little bit see-through */
+  /*   .prev:hover,
+     .next:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+     }*/
+
+     /* Number text (1/3 etc) */
+     .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+     }
+
+     /* Container for image text */
+     .caption-container {
+      text-align: center;
+      background-color: #222;
+      padding: 2px 16px;
+      color: white;
+     }
+
+     .row:after {
+      content: "";
+      display: table;
+      clear: both;
+     }
+
+     /* Six columns side by side */
+     .column {
+      float: left;
+      width: 16.66%;
+     }
+
+     /* Add a transparency effect for thumnbail images */
+     .demo {
+      opacity: 0.6;
+     }
+
+     .active,
+     .demo:hover {
+      opacity: 1;
+     }
+
+     .hero-image {
+       background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("photographer.jpg")!important;
+       height: 300px!important;
+       background-position: center!important;
+       background-repeat: no-repeat!important;
+       background-size: cover!important;
+       position: relative!important;
+     }
+
+
+     .hero-text {
+       text-align: center!important;
+       position: absolute!important;
+       top: 50%!important;
+       left: 50%!important;
+       transform: translate(-50%, -50%)!important;
+       color: white!important;
+     }
+
+
+
+     body, html {
+         height: 100%!important;
+         font-style: roboto;
+     }
+
+     .caption-container {
+       height:30px!important;
+     }
+
+
+     .prev {
+          background-color: transparent;
+     }
+
+
+     /*body {
+       min-height: 100vh!important;
+       position: relative!important;
+       margin: 0!important;
+       box-sizing: border-box!important;
+       padding-bottom: 500px!important; //height of the footer
+     }*/
+     /*
+     .footer {
+       position: absolute!important;
+       height: 100px!important;
+       width: 100%!important;
+     }*/
+
+    </style>
+    <!-- new js placeholder-->
+    <script>
+
+    var slideIndex = 1;
+
+    $( document ).ready(function() {
+          showSlides(slideIndex);
+    });
+
+    // Next/previous controls
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("demo");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+      captionText.innerHTML = dots[slideIndex-1].alt;
+    }
+
+    </script>
+  </head>
+
+
+
+  <body class="pace-dark windows desktop pace-done"> <div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;"> <div class="pace-progress-inner"></div></div><div class="pace-activity"></div></div>
 
 
 <div class="pace pace-inactive">
@@ -139,7 +316,8 @@
                                             <div class="container">
                                                 <div class="col-md-6 no-padding col-xs-10 col-xs-offset-1">
                                                     <h1 class="light sm-text-center" data-swiper-parallax="-15%" style="transform: translate3d(0%, 0px, 0px); transition-duration: 0ms;" style="font-weight: bold" ><strong>2 Hours</strong> </h1>
-                                                    <h4 class="sm-text-center">Fire Rated Smoke Extraction Ductwork System</h4></div>
+                                                    <h4 class="sm-text-center">Fire Rated Smoke Extraction Ductwork System</h4>
+                                                    <br><button class="btn-danger">Learn More</button></div>
                                             </div>
                                         </div>
                                     </div>
@@ -180,104 +358,215 @@
             </div>
         </section>
         <div class="front_page_background ">
-            <section class="front_thumbnails p-l-20 p-r-20">
-                <div class="col-sm-6 front_box shadow m-r-20 m-t-20 m-b-20">
-                    <center>
-                        <h2 class="p-b-5 welcome_title">WELCOME TO <strong>WINDUCT</strong></h2></center>
-                    <p>Passive Fire Protection Sdn Bhd was established in 1996 and has since been actively involved in the Passive Fire Protection as well as Active Fire Protection system. Manned by a group of professional technical staff and ex-fire services officer who are expert and strong skilled in the construction industry, Passive Fire Protection Sdn Bhd represent a wide range of fire resistance products.</p>
-                </div>
-                <div class="col-sm-6 front_box shadow m-r-20 m-t-20 m-b-20">
-                    <div>
-                        <a href="http://www2.ipay88.com/video/Winduct_Animaution.mp4" target="_blank">
-                            <center><img alt="" class="m-b-20 video_photo" src="images/winduct_video.png"></center>
-                        </a>
-                    </div>
-                    </img>
-                    <a href="http://www2.ipay88.com/video/Winduct_Animaution.mp4" target="_blank">
-                        <h3>LEADER IN QUALITY <br/>FIRE RATED DUCT</h3></a>
-                </div>
-            </section>
-            <section class="front_thumbnails p-l-20 p-r-20">
-                <div class="col-sm-4 front_box_01 shadow m-r-20 m-b-20">
-                    <div class="video_icon">
-                        <a href="winduct_overview.html">
-                            <center><img alt="" class="m-b-20" src="images/winduct_overview.png"></center>
-                        </a>
-                    </div>
-                    <h6 class="block-title p-b-5"><strong>WinDuct</strong>® Overview</h6>
-                    <p><strong>WinDuct</strong>® is a fire rated smoke extraction ductwork system tested to British Standard BS476 Part 24 (Duct A and Duct B) and Australian Standard AS1530.4 (Duct A and Duct B) for 120 minutes stability, integrity and insulation.</p><span class="font-arial small-text col-sm-9 no-padding button-text text-white"><a href="winduct_overview.html">Read More</a></span></div>
-                <div class="col-sm-4 front_box_01 shadow m-r-20 m-b-20">
-                    <div class="video_icon">
-                        <a href="awards_recognitions.html">
-                            <center><img alt="" class="m-b-20" src="images/awards.png"></center>
-                        </a>
-                    </div>
-                    <h6 class="block-title p-b-5"><strong>Award & Recognition</strong></h6>
-                    <p><strong>WinDuct</strong>® is honored to be awarded and recognized by various agencies for its quality assurance and performance.</p><span class="font-arial small-text col-sm-9 no-padding button-text text-white"><a href="awards_recognitions.html">Read More</a></span></div>
-                <div class="col-sm-4 front_box_01 shadow m-r-20 m-b-20">
-                    <div class="video_icon">
-                        <a href="project_references_local.html">
-                            <center><img alt="" class="m-b-20" src="images/project_ref.png"></center>
-                        </a>
-                    </div>
-                    <h6 class="block-title p-b-5"><strong>Project References</strong></h6>
-                    <p><strong>WinDuct</strong>® System has been installed in commercial and government projects worldwide.</p><span class="font-arial small-text col-sm-9 no-padding button-text text-white"><a href="project_references_local.html">Read More</a></span></div>
-            </section>
-        </div>
-        <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-darker">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <div class="row">
-                            <div class="col-sm-4" style="float:right">
-                                <a href="https://twitter.com/winductpfp" target="_blank"><img src="images/twitter.png" class="social_media m-l-10"></a>
-                                <a href="https://www.linkedin.com/in/winduct-passive-fire-protection-765040149/" target="_blank"><img src="images/linkedin.png" class="social_media m-l-10"></a>
-                                <a href="https://www.facebook.com/WinDuct-201330609883660/" target="_blank"><img src="images/facebook_icon.png" class="social_media"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-12 xs-m-b-40">
-                        <a href="index.html"><img src="images/logo_winduct.png" width="152" data-src-retina="images/logo_winduct.png" class="alt" alt="WinDuct Logo"></a>
-                        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10" style="font-size: 18px !important;">Passive Fire Protection Sdn. Bhd.</h6>
-                        <p class="text-white ">No 27, Jalan Pengacara U1/48, Section U1, Temasya Industrial Park, 40150 Shah Alam, Selangor Darul Ehsan,Malaysia.
-                            <br/><strong>Tel:</strong> + (60)3-5569 5706 / 5707
-                            <br/><strong>Fax:</strong> + (60)3-5569 5708
-                            <br/><strong>Email: </strong> <a href="mailto:sales@winduct.com" target="_blank">sales@winduct.com</a> / <a href="mailto:winduct@gmail.com" target="_blank">winduct@gmail.com</a>
-                            <br/><strong>Website:</strong> <a href="../index.html">www.winduct.com</a></p>
-                    </div>
-                    <div class="col-sm-2 col-xs-6 xs-m-b-20">
-                        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">About Us </h6>
-                        <ul class="no-style">
-                            <li class="m-b-5 no-padding"><a href="about_winduct.html" class="link text-white ">About WinDuct®</a></li>
-                            <li class="m-b-5 no-padding"><a href="why_choose_winduct.html" class="link text-white">Why Choose WinDuct®</a></li>
-                            <li class="m-b-5 no-padding"><a href="winduct_quality.html" class="link text-white">WinDuct® Quality Assurance</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-2 col-xs-6 xs-m-b-20">
-                        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">WinDuct®</h6>
-                        <ul class="no-style">
-                            <li class="m-b-5 no-padding"><a href="winduct_overview.html" class="link text-white ">WinDuct® Overview</a></li>
-                            <li class="m-b-5 no-padding"><a href="intumescent_coating.html" class="link text-white ">Intumescent Coating</a></li>
-                            <li class="m-b-5 no-padding"><a href="specifications.html" class="link text-white ">Specifications </a></li>
-                            <li class="m-b-5 no-padding"><a href="construction_details.html" class="link text-white">Construction Details</a></li>
-                            <li class="m-b-5 no-padding"><a href="before_after_test.html" class="link text-white">Before & After Test</a></li>
-                            <li class="m-b-5 no-padding"><a href="test_report.html" class="link text-white">Test Reports</a></li>
-                            <li class="m-b-5 no-padding"><a href="awards_recognitions.html" class="link text-white">Awards & Recognitions</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-3 col-xs-6 xs-m-b-20">
-                        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Project References</h6>
-                        <ul class="no-style">
-                            <li class="m-b-5 no-padding"><a href="project_references_local.html" class="link text-white ">Local</a></li>
-                            <li class="m-b-5 no-padding"><a href="project_references_oversea.html" class="link text-white ">Overseas</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 xs-m-b-20">
-                        <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10"><a href="contact.html" >Contact Us</a> </h6><img src="images/approved_by_bomba.png" class="approved_bottom_logo"> <img src="images/malaysian_brand.png" class="brand_bottom_logo"> <img src="images/ifc.png" class="ifc_bottom_logo"> <img src="images/iso.png" class="iso_bottom_logo"> <img src="images/responsible_care.png" class="responsible_bottom_logo"> </div>
-                </div>
-                <p class="fs-12 hint-text p-t-10 text-white">Copyright © 2007 - 2017 by Passive Fire Protection Sdn. Bhd. - All Rights Reserved.</p>
+          <section class="front_thumbnails p-l-20 p-r-20">
+            <div class="col-sm-12 m-r-20 m-t-20 m-b-20">
+              <!--start of card--><center>
+              <div class="card" style="width:100%!important;">
+              <div class="card-header">
+                <h5 class="card-title">The Winduct Story</h5>
+              </div>
+              <div class="row" style="text-align:justify">
+              <div class="col-sm-6">
+              <div class="card-body">
+                <!--<h5 class="card-title">The Winduct Story</h5>-->
+                <p class="card-text">WinDuct Fire Rated Smoke Extraction Ductwork system is a brand under Passive Fire Protection Sdn Bhd. Launched in 1996, WinDuct has undergo extensive research and development through fire engineering excellence and quality standards to provide the best fire rated smoke extraction ductwork system. With our vision for global branding, we provide the most innovative yet practical and cost-effective solutions for your fire protection needs.
+At WinDuct, we have extensive network of strategic alliances with local and foreign technology-based companies specializing in fire protection to cover your project needs and requirements and regular training is conducted to provide quality procedures to maintain the detail tested quality.</p>
+<p><strong>Global Distributors</strong><br>WinDuct is available through our authorized expert fire engineers and partners. Our global pressence is available through our offices in Malaysia and Vietnam and our strategic partners in Europe, Middle East, Asia, Australia and beyond. .</p>
+              </div>
+            </div><!--end of col sm-6-->
+            <div class="col-sm-6">
+            <div class="card-body" style="height:100%">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZSEhn1nvB1o?autoplay=1&mute=1">
+              </iframe>
             </div>
-        </section>
+          </div><!--end of col sm-6-->
+          </div><!-- end of row-->
+        </div>
+        </center><!--end of card-->
+
+
+              <div class="col-sm-12 m-r-20 m-t-20 m-b-20">
+                <!--start of card--><center>
+                <div class="card" style="width:100%!important;">
+                <div class="card-header">
+                  <h5 class="card-title">Winduct Overview</h5>
+                </div>
+                <div class="row" style="text-align:justify">
+                <div class="col-sm-12">
+                <div class="card-body">
+                  <!--start of hero-->
+      <div class="col-sm-12 m-r-20 m-t-20 m-b-20 hero-image">
+      <div class="hero-text">
+        <p>WinDuct® is a fire rated smoke extraction ductwork system tested to British Standard BS476 Part 24 (Duct A and Duct B) and Australian Standard AS 1530.4 (Duct A and Duct B) for 120 minutes stability, integrity and insulation. </p>
+        <button class="btn btn-warning">See More</button>
+      </div>
+      </div>
+      <!--end of hero-->
+    </div><!--end of card body-->
+            </div><!--end of "col-sm-12-->
+          </div><!-- end of row-->
+          </center><!--end of card-->
+
+              </div>
+
+
+              <div class="col-sm-12 m-r-20 m-t-20 m-b-20">
+                <!--<center><button class="btn btn-primary btn-lg"  onclick="window.location.href='all_projects.html'">FEATURED PROJECTS</button></center>-->
+                <!--start of card--><center>
+                <div class="card" style="width:100%!important;">
+                <div class="card-header">
+                  <h5 class="card-title">
+<a style="color:black!important;" href="all_projects.html">FEATURED PROJECTS</a>
+</h5>
+                </div>
+                <div class="row" style="text-align:justify">
+                <div class="col-sm-12">
+                <div class="card-body">
+                  <!--Beginning of gallery slider-->
+                  <!-- Container for the image gallery -->
+                  <div class="container">
+                   <!-- Full-width images with number text -->
+                   <div class="mySlides">
+                     <div class="numbertext">1 / 6</div>
+                       <img src="img_woods_wide.jpg" style="width:100%">
+                   </div>
+
+                   <div class="mySlides">
+                     <div class="numbertext">2 / 6</div>
+                       <img src="img_5terre_wide.jpg" style="width:100%">
+                   </div>
+
+                   <div class="mySlides">
+                     <div class="numbertext">3 / 6</div>
+                       <img src="img_mountains_wide.jpg" style="width:100%">
+                   </div>
+
+                   <div class="mySlides">
+                     <div class="numbertext">4 / 6</div>
+                       <img src="img_lights_wide.jpg" style="width:100%">
+                   </div>
+
+                   <div class="mySlides">
+                     <div class="numbertext">5 / 6</div>
+                       <img src="img_nature_wide.jpg" style="width:100%">
+                   </div>
+
+                   <div class="mySlides">
+                     <div class="numbertext">6 / 6</div>
+                       <img src="img_snow_wide.jpg" style="width:100%">
+                   </div>
+
+                   <!-- Next and previous buttons -->
+                   <a class="prev" onclick="plusSlides(-1)" style="text-align:left!important;">&#10094;</a>
+                   <a class="next" onclick="plusSlides(1)" style="text-align:right!important;">&#10095;</a>
+
+                   <!-- Image text -->
+                   <div class="caption-container">
+                     <p id="caption"></p>
+                   </div>
+
+                   <!-- Thumbnail images -->
+                   <div class="row">
+                     <div class="column">
+                       <img class="demo cursor" src="img_woods.jpg" style="width:100%" onclick="currentSlide(1)" alt="The Woods">
+                     </div>
+                     <div class="column">
+                       <img class="demo cursor" src="img_5terre.jpg" style="width:100%" onclick="currentSlide(2)" alt="Cinque Terre">
+                     </div>
+                     <div class="column">
+                       <img class="demo cursor" src="img_mountains.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                     </div>
+                     <div class="column">
+                       <img class="demo cursor" src="img_lights.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                     </div>
+                     <div class="column">
+                       <img class="demo cursor" src="img_nature.jpg" style="width:100%" onclick="currentSlide(5)" alt="Nature and sunrise">
+                     </div>
+                     <div class="column">
+                       <img class="demo cursor" src="img_snow.jpg" style="width:100%" onclick="currentSlide(6)" alt="Snowy Mountains">
+                     </div>
+                   </div>
+                  </div>
+                  <!--end of gallery slider-->
+                </div><!--end of card body-->
+                </div><!--end of "col-sm-12-->
+                </div><!-- end of row-->
+                      </center><!--end of card-->
+              </div>
+              <div class="col-sm-12 m-r-20 m-t-20 m-b-20">
+                <!--<center><button class="btn btn-primary btn-lg">WORLDWIDE DISTRIBUTIONS</button></center>-->
+                <!--start of card--><center>
+                <div class="card" style="width:100%!important;">
+                <div class="card-header">
+                  <h5 class="card-title">WORLDWIDE DISTRIBUTIONS</h5>
+                </div>
+                <div class="row" style="text-align:justify">
+                <div class="col-sm-12">
+                <div class="card-body">
+                  Sometext here
+                </div><!--end of card body-->
+                        </div><!--end of "col-sm-12-->
+                      </div><!-- end of row-->
+                      </div><!--end or card-->
+                      </center>
+              </div><!--end of div-->
+        <div class="bg-master-darker col-sm-12 m-r-20 m-t-20 m-b-20" style="">
+          <!--<div class="container">-->
+          <div class="row">
+          <div class="col-sm-12">
+              <div class="row">
+                  <div class="col-sm-4" style="float:right">
+                      <!--<a href="https://twitter.com/winductpfp" target="_blank"><img src="images/twitter.png" class="social_media m-l-10"></a>
+                      <a href="https://www.linkedin.com/in/winduct-passive-fire-protection-765040149/" target="_blank"><img src="images/linkedin.png" class="social_media m-l-10"></a>
+                      <a href="https://www.facebook.com/WinDuct-201330609883660/" target="_blank"><img src="images/facebook_icon.png" class="social_media"></a>-->
+                  </div>
+              </div>
+          </div>
+          <div class="col-sm-4 col-xs-12 xs-m-b-40">
+              <!--<a href="index.html"><img src="images/logo_winduct.png" width="152" data-src-retina="images/logo_winduct.png" class="alt" alt="WinDuct Logo"></a>-->
+              <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10" style="font-size: 18px !important;">Passive Fire Protection Sdn. Bhd.</h6>
+              <p class="text-white ">No 27, Jalan Pengacara U1/48, Section U1, Temasya Industrial Park, 40150 Shah Alam, Selangor Darul Ehsan,Malaysia.
+                  <br/><strong>Tel:</strong> + (60)3-5569 5706 / 5707
+                  <br/><strong>Fax:</strong> + (60)3-5569 5708
+                  <br/><strong>Email: </strong> <a href="mailto:sales@winduct.com" target="_blank">sales@winduct.com</a> / <a href="mailto:winduct@gmail.com" target="_blank">winduct@gmail.com</a>
+                  <br/><strong>Website:</strong> <a href="../index.html">www.winduct.com</a></p>
+          </div>
+          <div class="col-sm-2 col-xs-6 xs-m-b-20">
+              <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">About Us </h6>
+              <ul class="no-style">
+                  <li class="m-b-5 no-padding"><a href="about_winduct.html" class="link text-white ">About WinDuct®</a></li>
+                  <li class="m-b-5 no-padding"><a href="why_choose_winduct.html" class="link text-white">Why Choose WinDuct®</a></li>
+                  <li class="m-b-5 no-padding"><a href="winduct_quality.html" class="link text-white">WinDuct® Quality Assurance</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-2 col-xs-6 xs-m-b-20">
+              <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">WinDuct®</h6>
+              <ul class="no-style">
+                  <li class="m-b-5 no-padding"><a href="winduct_overview.html" class="link text-white ">WinDuct® Overview</a></li>
+                  <li class="m-b-5 no-padding"><a href="intumescent_coating.html" class="link text-white ">Intumescent Coating</a></li>
+                  <li class="m-b-5 no-padding"><a href="specifications.html" class="link text-white ">Specifications </a></li>
+                  <li class="m-b-5 no-padding"><a href="construction_details.html" class="link text-white">Construction Details</a></li>
+                  <li class="m-b-5 no-padding"><a href="before_after_test.html" class="link text-white">Before & After Test</a></li>
+                  <li class="m-b-5 no-padding"><a href="test_report.html" class="link text-white">Test Reports</a></li>
+                  <li class="m-b-5 no-padding"><a href="awards_recognitions.html" class="link text-white">Awards & Recognitions</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-3 col-xs-6 xs-m-b-20">
+              <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Project References</h6>
+              <ul class="no-style">
+                  <li class="m-b-5 no-padding"><a href="project_references_local.html" class="link text-white ">Local</a></li>
+                  <li class="m-b-5 no-padding"><a href="project_references_oversea.html" class="link text-white ">Overseas</a></li>
+              </ul>
+          </div>
+          <div class="col-sm-4 col-xs-6 xs-m-b-20">
+              <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10"><a href="contact.html" >Contact Us</a> </h6><img src="images/approved_by_bomba.png" class="approved_bottom_logo"> <img src="images/malaysian_brand.png" class="brand_bottom_logo"> <img src="images/ifc.png" class="ifc_bottom_logo"> <img src="images/iso.png" class="iso_bottom_logo"> <img src="images/responsible_care.png" class="responsible_bottom_logo"> </div>
+        </div><!--end of row-->
+      <!--  </div><!--end of container-->
+        </div>
+        <p class="fs-12 hint-text p-t-10 text-white">Copyright © 2007 - <p class="currYear"></p> by Passive Fire Protection Sdn. Bhd. - All Rights Reserved.</p>
+      </div>
+        </div><!--end of div-->
+        <!-- old script placeholder -->
         <script src="js/google.js" type="text/javascript"></script>
         <script src="js/pace.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/pages.image.loader.js"></script>
@@ -289,6 +578,8 @@
         <script type="text/javascript" src="js/jquery.unveil.min.js"></script>
         <script type="text/javascript" src="js/pages.frontend.js"></script>
         <script type="text/javascript" src="js/custom.js"></script>
+        <script type="text/javascript" async="" src="js/ga.js"></script>
+
 
 </body>
 
