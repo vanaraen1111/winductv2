@@ -2472,6 +2472,10 @@ width: 50%;
 .bg-master-darker {
     background-color: #1a1a1a;
 }
+
+.bg-master-bluer {
+    background-color: #09124b;
+}
 .bg-master-darker h6 {
 	color:#FFFFFF;
 }
