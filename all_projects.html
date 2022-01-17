@@ -70,13 +70,72 @@
           color: blue!important;
           text-decoration: underline!important;
         }
+
+        /*Gallery grid CSS*/
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .header {
+          text-align: center;
+          padding: 32px;
+        }
+
+        .row {
+          display: -ms-flexbox; /* IE 10 */
+          display: flex;
+          -ms-flex-wrap: wrap; /* IE 10 */
+          flex-wrap: wrap;
+          padding: 0 4px;
+        }
+
+        /* Create two equal columns that sits next to each other */
+        .column {
+          -ms-flex: 50%; /* IE 10 */
+          flex: 50%;
+          padding: 0 4px;
+        }
+
+        .column img {
+          margin-top: 8px;
+          vertical-align: middle;
+        }
+
+        /* Style the buttons */
+        .btn {
+          border: none;
+          outline: none;
+          padding: 10px 16px;
+          background-color: #f1f1f1;
+          cursor: pointer;
+          font-size: 18px;
+        }
+
+        .btn:hover {
+          background-color: #ddd;
+        }
+
+        .btn.active {
+          background-color: #666;
+          color: white;
+        }
+
+
+        /*Gallery grid CSS ends here*/
     </style>
     <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="css/main.css" /><!-- InstanceEndEditable -->
 <script>
-
+var i;
+var elements = document.getElementsByClassName("column");
 $( document ).ready(function() {
       $(".currentYear").text(new Date().getFullYear());
+      four();
 });
 
 function w3_open() {
@@ -87,6 +146,48 @@ function w3_close() {
   document.getElementById("mySidebar").style.display = "none";
 }
 
+/**Gallery Grid script**/
+// Get the elements with class="column"
+//var elements = document.getElementsByClassName("column");
+
+// Declare a loop variable
+
+
+// Full-width images
+function one() {
+    for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "100%";  // IE10
+    elements[i].style.flex = "100%";
+  }
+}
+
+// Two images side by side
+function two() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "50%";  // IE10
+    elements[i].style.flex = "50%";
+  }
+}
+
+// Four images side by side
+function four() {
+  for (i = 0; i < elements.length; i++) {
+    elements[i].style.msFlex = "25%";  // IE10
+    elements[i].style.flex = "25%";
+  }
+}
+
+// Add active class to the current button (highlight it)
+var header = document.getElementById("myHeader");
+var btns = header.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+/**Gallery Grid script ENDS HERE**/
 </script>
 </head>
 
@@ -160,7 +261,7 @@ function w3_close() {
       <div class="container">
       <div class="row">
       <div class="col-sm-12 p-l-5 p-r-5">
-  		<div class="col-sm-4">
+  		<div class="col-sm-3">
                   <!--Breadcrumbs-->
                   <ul class="breadcrumb">
                     <li  style="background-color:lightgrey;"><a href="/index.html">Home</a></li>
@@ -182,19 +283,61 @@ function w3_close() {
                   <a href="#" class="w3-bar-item w3-button">Theme Park</a><br>
               </div>
                <!--end of Sidebar-->
-      </div><!--end of col-sm-4-->
-        <div class="col-sm-6">
+      </div><!--end of col-sm-3-->
+        <div class="col-sm-9">
           <!-- Page Content -->
               <div class="w3-main" >
 
               <div class="w3-container">
-                <h3>Responsive Sidebar</h3>
-                <p>The sidebar in this example will always be displayed on screens wider than 992px, and hidden on tablets or mobile phones (screens less than 993px wide).</p>
-                <p>On tablets and mobile phones the sidebar is replaced with a menu icon to open the sidebar.</p>
-                <p>The sidebar will overlay of the page content.</p>
-                <p><b>Resize the browser window to see how it works.</b></p>
-              </div>
+                <!-- Header -->
+                <div class="" id="myHeader" style="text-align:center;">
+                  <h1>Image Grid</h1>
+                  <p>Click on the buttons to change the grid view.</p>
+                  <button class="btn" onclick="one()">1</button>
+                  <button class="btn" onclick="two()">2</button>
+                  <button class="btn" onclick="four()">4</button>
+                </div>
 
+                <!-- Photo Grid -->
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+              </div>
+<!--
               <div class="w3-container">
                 <h3>Responsive Sidebar</h3>
                 <p>The sidebar in this example will always be displayed on screens wider than 992px, and hidden on tablets or mobile phones (screens less than 993px wide).</p>
@@ -226,10 +369,10 @@ function w3_close() {
                 <p>The sidebar will overlay of the page content.</p>
                 <p><b>Resize the browser window to see how it works.</b></p>
               </div>
-
+-->
               </div>
               <!--end of page content-->
-        </div><!--end of col-sm-6-->
+        </div><!--end of col-sm-9-->
       </div>
       </div><!--end of row-->
   </div><!--end of container-->
