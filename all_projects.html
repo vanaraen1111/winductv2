@@ -125,8 +125,9 @@
           color: white;
         }
 
-
         /*Gallery grid CSS ends here*/
+
+
     </style>
     <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="css/main.css" /><!-- InstanceEndEditable -->
@@ -135,7 +136,7 @@ var i;
 var elements = document.getElementsByClassName("column");
 $( document ).ready(function() {
       $(".currentYear").text(new Date().getFullYear());
-      four();
+
 });
 
 function w3_open() {
@@ -269,18 +270,24 @@ for (var i = 0; i < btns.length; i++) {
                   </ul>
                 <!--end of Breadcrumbs-->
                 <!--Sidebar-->
-                <div style="font-color:black;">
+                <div class="fixed-top" style="font-color:black!important;padding-top:500px!important;padding-left:400px!important;">
                   <a href="#" class="w3-bar-item w3-button">View All</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Mixed Developments</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Infrastructures</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Airport</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Hospital</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Hotel</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Malls</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Government Projects</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Factory</a><br>
-                  <a href="#" class="w3-bar-item w3-button">University</a><br>
-                  <a href="#" class="w3-bar-item w3-button">Theme Park</a><br>
+                  <a href="#airport" class="w3-bar-item w3-button">Airport</a><br>
+                  <a href="#bank" class="w3-bar-item w3-button">Bank, Administrative &amp; Government</a><br>
+                  <a href="#commercial" class="w3-bar-item w3-button">Commercial</a><br>
+                  <a href="#factory" class="w3-bar-item w3-button">Factory &amp; Warehouse</a><br>
+                  <a href="#highrise" class="w3-bar-item w3-button">High Rise Building</a><br>
+                  <a href="#hospital" class="w3-bar-item w3-button">Hospital</a><br>
+                  <a href="#hotel" class="w3-bar-item w3-button">Hotel</a><br>
+                  <a href="#infrastructure" class="w3-bar-item w3-button">Infrastructures</a><br>
+                  <a href="#mall" class="w3-bar-item w3-button">Mall</a><br>
+                  <a href="#mixed" class="w3-bar-item w3-button">Mixed Development</a><br>
+                  <a href="#residential" class="w3-bar-item w3-button">Residential</a><br>
+                  <a href="#stadium" class="w3-bar-item w3-button">Stadium &amp; Public Centre</a><br>
+                  <a href="#university" class="w3-bar-item w3-button">University &amp; Education Centre</a><br>
+                  <a href="#others" class="w3-bar-item w3-button">Others</a><br>
+
+
               </div>
                <!--end of Sidebar-->
       </div><!--end of col-sm-3-->
@@ -295,10 +302,19 @@ for (var i = 0; i < btns.length; i++) {
                   <p>Click on the buttons to change the grid view.</p>
                   <button class="btn" onclick="one()">1</button>
                   <button class="btn" onclick="two()">2</button>
-                  <button class="btn" onclick="four()">4</button>
+                  <button class="btn" id="btn4" onclick="four()">4</button>
                 </div>
 
-                <!-- Photo Grid -->
+                <!-- 1. Project Highlights-->
+
+                <!-- End of 1. Project Highlights-->
+
+
+                <!-- 2. Airport-->
+                <div id="airport" style="text-align:center;">
+                  <h3>Airport</h3>
+                </div>
+
                 <div class="row">
                   <div class="column">
                     <img src="wedding.jpg" style="width:100%">
@@ -336,6 +352,594 @@ for (var i = 0; i < btns.length; i++) {
                   </div>
                 </div>
 
+                <!-- End of 2. Airport-->
+
+                <!-- 3. Bank, Administrative &amp; Government-->
+                <div id="bank" style="text-align:center;">
+                  <h3>Bank, Administrative &amp; Government</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 3. Bank, Administrative &amp; Government-->
+
+
+                <!-- 4. Commercial-->
+
+                <div id="commercial" style="text-align:center;">
+                  <h3>Commercial</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 4. Commercial-->
+
+                <!-- 5. Factory &amp; Warehouse-->
+
+                <div id="factory" style="text-align:center;">
+                  <h3>Factory &amp; Warehouse</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 5. Factory &amp; Warehouse-->
+
+
+                <!-- 6. High Rise Building-->
+
+                <div id="highrise" style="text-align:center;">
+                  <h3>High Rise Building</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 6. High Rise Building-->
+
+
+                <!-- 7. Hospital-->
+
+                <div id="hospital" style="text-align:center;">
+                  <h3>Hospital</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 7. Hospital-->
+
+
+                <!-- 8. Hotel-->
+
+                <div id="hotel" style="text-align:center;">
+                  <h3>Hotel</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 8. Hotel-->
+
+
+                <!-- 9. Infrastructures-->
+                <div id="infrastructure" style="text-align:center;">
+                  <h3>Infrastructure</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+                <!-- End of 9. Infrastructures-->
+
+
+                <!-- 10. Mall-->
+                <div id="mall" style="text-align:center;">
+                  <h3>Mall</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 10. Mall-->
+
+
+                <!-- 11. Mixed Development-->
+                <div id="mixed" style="text-align:center;">
+                  <h3>Mixed Development</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 11. Mixed Development-->
+
+
+                <!-- 12. Residential-->
+                <div id="residential" style="text-align:center;">
+                  <h3>Residential</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 12. Residential-->
+
+
+                <!-- 13. Stadium &amp; Public Centre-->
+                <div id="stadium" style="text-align:center;">
+                  <h3>Stadium &amp; Public Centre</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+                <!-- End of 13. Stadium &amp; Public Centre-->
+
+
+                <!-- 14. University &amp; Education Centre-->
+                <div id="university" style="text-align:center;">
+                  <h3>University &amp; Education Centre</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+
+                <!-- End of 14. University &amp; Education Centre-->
+
+
+                <!-- 14. Others-->
+                <div id="others" style="text-align:center;">
+                  <h3>Others</h3>
+                </div>
+
+                <div class="row">
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="falls2.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                    <img src="nature.jpg" style="width:100%">
+                    <img src="mist.jpg" style="width:100%">
+                    <img src="paris.jpg" style="width:100%">
+                  </div>
+                  <div class="column">
+                    <img src="underwater.jpg" style="width:100%">
+                    <img src="ocean.jpg" style="width:100%">
+                    <img src="wedding.jpg" style="width:100%">
+                    <img src="mountainskies.jpg" style="width:100%">
+                    <img src="rocks.jpg" style="width:100%">
+                    <img src="underwater.jpg" style="width:100%">
+                  </div>
+                </div>
+
+                <!-- End of 14. Otherse-->
               </div>
 <!--
               <div class="w3-container">
