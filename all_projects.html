@@ -137,6 +137,17 @@ var elements = document.getElementsByClassName("column");
 $( document ).ready(function() {
       $(".currentYear").text(new Date().getFullYear());
 
+      // Add active class to the current button (highlight it)
+      var header = document.getElementById("myHeader");
+      var btns = header.getElementsByClassName("btn");
+      for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+          var current = document.getElementsByClassName("active");
+          current[0].className = current[0].className.replace(" active", "");
+          this.className += " active";
+        });
+      }
+
 });
 
 function w3_open() {
@@ -178,16 +189,7 @@ function four() {
   }
 }
 
-// Add active class to the current button (highlight it)
-var header = document.getElementById("myHeader");
-var btns = header.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+
 /**Gallery Grid script ENDS HERE**/
 </script>
 </head>
@@ -270,7 +272,7 @@ for (var i = 0; i < btns.length; i++) {
                   </ul>
                 <!--end of Breadcrumbs-->
                 <!--Sidebar-->
-                <div class="fixed-top" style="font-color:black!important;padding-top:500px!important;padding-left:400px!important;">
+                <div class="" style="font-color:black!important;">
                   <a href="#" class="w3-bar-item w3-button">View All</a><br>
                   <a href="#airport" class="w3-bar-item w3-button">Airport</a><br>
                   <a href="#bank" class="w3-bar-item w3-button">Bank, Administrative &amp; Government</a><br>
@@ -297,13 +299,15 @@ for (var i = 0; i < btns.length; i++) {
 
               <div class="w3-container">
                 <!-- Header -->
-                <div class="" id="myHeader" style="text-align:center;">
+
+                <div class="" id="myHeader" style="text-align:center!important;">
                   <h1>Image Grid</h1>
                   <p>Click on the buttons to change the grid view.</p>
                   <button class="btn" onclick="one()">1</button>
                   <button class="btn" onclick="two()">2</button>
-                  <button class="btn" id="btn4" onclick="four()">4</button>
+                  <button class="btn" onclick="four()">4</button>
                 </div>
+              </center>
 
                 <!-- 1. Project Highlights-->
 
