@@ -65,6 +65,19 @@
           flex: 25%!important;
           padding: 0 4px!important;
         }
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border: 1px solid #ccc;
+          border-top: none;
+          margin-bottom: 20px;
+          text-align: center;
+        }
+
+        .tabcontent h3{
+          color:white;
+        }
     </style>
     <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="css/main.css" /><!-- InstanceEndEditable -->
@@ -137,33 +150,33 @@
     <!-- InstanceBeginEditable name="body" --><div class="product_background"><section class="winduct_content"><div class="slides desktop_version"><img src="images/top_banner_15.png" /></div>
     <div class="container mobile_top_02">
   <div class="col-xs-height col-middle text-left">
-    <h1 class="inner p-b-50 m-b-20 text-white">All Projects V2</h1>
+    <h1 class="inner p-b-50 m-b-20 text-white">All Projects</h1>
   </div>
 </div></section>
 <div class="col-sm-3">
   <!--Breadcrumbs-->
-  <ul class="breadcrumb">
+  <ul class="breadcrumb"  style="padding-top:80px;">
     <li  style="padding-top:10px;"><a href="/index.html">Home</a></li>
     <li  style=""><a href="#">Projects</a></li>
   </ul>
 <!--end of Breadcrumbs-->
 <!--Sidebar-->
-<ul class="breadcrumb" style="position:-webkit-sticky!important;position: sticky!important;top: 0!important;"><li>
+<ul class="breadcrumb"><li>
 <div class="" style="font-color:black!important;">
   <a href="#" class="w3-bar-item w3-button">View All</a><br>
-  <a href="#airport" class="w3-bar-item w3-button">Airport</a><br>
-  <a href="#bank" class="w3-bar-item w3-button">Bank, Administrative &amp; Government</a><br>
-  <a href="#commercial" class="w3-bar-item w3-button">Commercial</a><br>
-  <a href="#factory" class="w3-bar-item w3-button">Factory &amp; Warehouse</a><br>
-  <a href="#highrise" class="w3-bar-item w3-button">High Rise Building</a><br>
-  <a href="#hospital" class="w3-bar-item w3-button">Hospital</a><br>
-  <a href="#hotel" class="w3-bar-item w3-button">Hotel</a><br>
-  <a href="#infrastructure" class="w3-bar-item w3-button">Infrastructures</a><br>
-  <a href="#mall" class="w3-bar-item w3-button">Mall</a><br>
   <a href="#mixed" class="w3-bar-item w3-button">Mixed Development</a><br>
-  <a href="#residential" class="w3-bar-item w3-button">Residential</a><br>
-  <a href="#stadium" class="w3-bar-item w3-button">Stadium &amp; Public Centre</a><br>
-  <a href="#university" class="w3-bar-item w3-button">University &amp; Education Centre</a><br>
+  <a href="#highrise" class="w3-bar-item w3-button">High Rise Building</a><br>
+  <a href="#mall" class="w3-bar-item w3-button">Shopping Mall</a><br>
+  <a href="#hotel" class="w3-bar-item w3-button">Hotel</a><br>
+  <a href="#hospital" class="w3-bar-item w3-button">Hospital</a><br>
+  <a href="#airport" class="w3-bar-item w3-button">Airport</a><br>
+  <a href="#infrastructure" class="w3-bar-item w3-button">Infrastructures</a><br>
+  <a href="#bank" class="w3-bar-item w3-button">Bank, Administrative &amp; Government</a><br>
+  <a href="#factory" class="w3-bar-item w3-button">Factory, Warehouse &amp; Distribution Centre</a><br>
+  <a href="#commercial" class="w3-bar-item w3-button">Commercial</a><br>
+  <a href="#stadium" class="w3-bar-item w3-button">Stadium &amp; Public Ammenities</a><br>
+  <a href="#university" class="w3-bar-item w3-button">Universities &amp; Education Centre</a><br>
+  <a href="#residential" class="w3-bar-item w3-button">Residential Building</a><br>
   <a href="#others" class="w3-bar-item w3-button">Others</a><br>
 </div>
 <!--end of Sidebar-->
@@ -322,29 +335,313 @@
 </div> <!--end wrapper-->
 
 <!--</div><!--end col-sm-9-->
-<div class="col-sm-9" style="padding-top:80px!important;">
+<div class="col-sm-9" style="padding-top:100px!important;">
 <div id="wrapper" class="p-b-65">
 <section id="main">
 <section class="thumbnails ze-page">
 
-  <!-- New Layout Design -->
-  <a href="images/local/Universiti_Teknologi_Petonas.jpg" class="shadow">
-    <img src="images/thumbs/Universiti_Teknologi_Petonas.jpg" alt="" />
-    <h3>Universiti Teknologi Petronas</h3>
-  </a>
-  <a href="images/local/setia_walk.jpg" class="shadow">
-    <img src="images/thumbs/setia_walk.jpg" alt="" />
-    <h3>Setia Walk, Puchong</h3>
-  </a>
-  <a href="images/local/Putrajaya_Convention_Centre.jpg" class="shadow">
-    <img src="images/thumbs/Putrajaya_Convention_Centre.jpg" alt="" />
-    <h3>Putrajaya Convention Centre</h3>
-  </a>
-  <a href="images/local/Lot_G_KL_Sentral.jpg" class="shadow">
-    <img src="images/thumbs/Lot_G_KL_Sentral.jpg" alt="" />
-    <h3>Lot G KL Sentral</h3>
-  </a>
-  <!-- end of new layout design-->
+  <div id="viewall" class="tabcontent">
+    <div id="wrapper" class="p-b-65">
+    <section id="main">
+    <section class="thumbnails">
+      <!-- New Layout Design -->
+      <a href="images/local/Universiti_Teknologi_Petonas.jpg" class="shadow">
+        <img src="images/thumbs/Universiti_Teknologi_Petonas.jpg" alt="" />
+        <h3>Universiti Teknologi Petronas</h3>
+      </a>
+      <a href="images/local/setia_walk.jpg" class="shadow">
+        <img src="images/thumbs/setia_walk.jpg" alt="" />
+        <h3>Setia Walk, Puchong</h3>
+      </a>
+      <a href="images/local/Putrajaya_Convention_Centre.jpg" class="shadow">
+        <img src="images/thumbs/Putrajaya_Convention_Centre.jpg" alt="" />
+        <h3>Putrajaya Convention Centre</h3>
+      </a>
+      <a href="images/local/Lot_G_KL_Sentral.jpg" class="shadow">
+        <img src="images/thumbs/Lot_G_KL_Sentral.jpg" alt="" />
+        <h3>Lot G KL Sentral</h3>
+      </a>
+      <!-- end of new layout design-->
+
+
+    </section><!-- end of section thumbnails-->
+    </section><!-- end of <section id="main"> -->
+    </div><!-- end of  <div id="wrapper" class="p-b-65"> -->
+
+  </div>
+
+  <div id="airport" class="tabcontent">
+    <h3>Airport</h3>
+    <div id="wrapper" class="p-b-65">
+    <section id="main">
+    <section class="thumbnails">
+      <a href="/images/projects/airport/highlights/1, 3 KLIA Airport.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/1, 3 KLIA Airport.jpg" alt="" />
+        <h3>KLIA Airport</h3>
+      </a>
+      <a href="/images/projects/airport/highlights/2. Kota Kinabalu International Airport.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/2. Kota Kinabalu International Airport.jpg" alt="" />
+        <h3>Kota Kinabalu International Airport</h3>
+      </a>
+      <a href="/images/projects/airport/highlights/4 KLIA 2 Radio Control Tower.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/4 KLIA 2 Radio Control Tower.jpg" alt="" />
+        <h3>KLIA 2 Radio Control Tower</h3>
+      </a>
+      <a href="images/projects/airport/highlights/5 Skypark KL.jpg" class="shadow">
+        <img src="images/projects/airport/highlights/thumbs/5 Skypark KL.jpg" alt="" />
+        <h3>Skypark KL</h3>
+      </a>
+      <a href="/images/projects/airport/highlights/6 Tan Soon Nhat Airport Vietnam.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/6 Tan Soon Nhat Airport Vietnam.jpg" alt="" />
+        <h3>Tan Soon Nhat Airport Vietnam</h3>
+      </a>
+
+      <a href="/images/projects/airport/highlights/7 Phnom Penh Airport.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/7 Phnom Penh Airport.jpg" alt="" />
+        <h3>Phnom Penh Airport</h3>
+      </a>
+
+      <a href="/images/projects/airport/highlights/8 Brunei Airport.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/8 Brunei Airport.jpg" alt="" />
+        <h3>Brunei Airport</h3>
+      </a>
+
+      <a href="/images/projects/airport/highlights/9. Mongolia Airport.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/9. Mongolia Airport.jpg" alt="" />
+        <h3>Mongolia Airport</h3>
+      </a>
+
+      <a href="/images/projects/airport/highlights/10. KLIA 2 Mall.jpg" class="shadow">
+        <img src="/images/projects/airport/highlights/thumbs/10. KLIA 2 Mall.jpg" alt="" />
+        <h3>KLIA 2 Mall</h3>
+      </a>
+    </section><!-- end of section thumbnails-->
+    <section class="thumbnails">
+      <a href="/images/projects/airport/AEROTEL.jpg" class="shadow">
+        <img src="/images/projects/airport/thumbs/AEROTEL.jpg" alt="" />
+        <h3>AEROTEL</h3>
+      </a>
+      <a href="/images/projects/airport/BINTULU AIRPORT.jpg" class="shadow">
+        <img src="/images/projects/airport/thumbs/BINTULU AIRPORT.jpg" alt="" />
+        <h3>BINTULU AIRPORT</h3>
+      </a>
+      <a href="/images/projects/airport/KUALA TERENGGANU AIRPORT.jpg" class="shadow">
+        <img src="/images/projects/airport/thumbs/KUALA TERENGGANU AIRPORT.jpg" alt="" />
+        <h3>KUALA TERENGGANU AIRPORT</h3>
+      </a>
+      <a href="images/projects/airport/KUCHING INT AIPORT.jpg" class="shadow">
+        <img src="images/projects/airport/thumbs/KUCHING INT AIPORT.jpg" alt="" />
+        <h3>KUCHING INT AIPORT</h3>
+      </a>
+      <a href="/images/projects/airport/LANGKAWI AIPORT.jpg" class="shadow">
+        <img src="/images/projects/airport/thumbs/LANGKAWI AIPORT.jpg" alt="" />
+        <h3>LANGKAWI AIPORT</h3>
+      </a>
+      <a href="/images/projects/airport/PENANG INT AIPORT.jpg" class="shadow">
+        <img src="/images/projects/airport/thumbs/PENANG INT AIPORT.jpg" alt="" />
+        <h3>PENANG INT AIPORT</h3>
+      </a>
+    </section><!-- end of section thumbnails-->
+    </section><!-- end of <section id="main"> -->
+    </div><!-- end of  <div id="wrapper" class="p-b-65"> -->
+  </div>
+
+  <div id="bank" class="tabcontent">
+    <h3>Bank, Administrative &amp; Government</h3>
+    <div id="wrapper" class="p-b-65">
+    <section id="main">
+    <section class="thumbnails">
+      <!--
+      <a href="/images/projects/bank admin govt/first/" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/" alt="" />
+      </a>
+    -->
+      <a href="/images/projects/bank admin govt/first/1. Kompleks Bekalan Polis Subang.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/1. Kompleks Bekalan Polis Subang.jpg" alt="" />
+        <h3>Kompleks Bekalan Polis Subang</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/2.Securities Commision Damansara.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/2.Securities Commision Damansara.jpg" alt="" />
+        <h3>Securities Commision Damansara</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/3.Maybank Square Kuala Lumpur.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/3.Maybank Square Kuala Lumpur.jpg" alt="" />
+        <h3>Maybank Square Kuala Lumpur</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/5.RHB Training centre bangi.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/5.RHB Training centre bangi.jpg" alt="" />
+        <h3>RHB Training centre bangi</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/6.Tabung Haji Building Johor.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/6.Tabung Haji Building Johor.jpg" alt="" />
+        <h3>Tabung Haji Building Johor</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/9.Mahkamah Kuala Lumpur.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/9.Mahkamah Kuala Lumpur.jpg" alt="" />
+        <h3>Mahkamah Kuala Lumpur</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/10.Australia High Commission Malaysia.jpeg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/10.Australia High Commission Malaysia.jpeg" alt="" />
+        <h3>Australia High Commission Malaysia</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/11.Putrajaya 4G9,4G10, 4G11.JPG" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/11.Putrajaya 4G9,4G10, 4G11.JPG" alt="" />
+        <h3>Putrajaya 4G9,4G10, 4G11</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/16.MITI HQ KL.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/16.MITI HQ KL.jpg" alt="" />
+        <h3>MITI HQ KL</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/19.RTM Media City.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/19.RTM Media City.jpg" alt="" />
+        <h3>RTM Media City</h3>
+      </a>
+    </section>
+    <section class="thumbnails">
+      <a href="/images/projects/bank admin govt/first/21.Bank-Negara Malaysia.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/21.Bank-Negara Malaysia.jpg" alt="" />
+        <h3>Bank Negara Malaysia</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/23.Kwasa C8 @ Sungai Buloh (EPF).jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/23.Kwasa C8 @ Sungai Buloh (EPF).jpg" alt="" />
+        <h3>Kwasa C8 @ Sungai Buloh (EPF)</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/24.The Supreme People_s Court Vietnam.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/24.The Supreme People_s Court Vietnam.jpg" alt="" />
+        <h3>The Supreme People's Court Vietnam</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/25.CRDB Tanzania.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/25.CRDB Tanzania.jpg" alt="" />
+        <h3>CRDB Tanzania</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/26.National Bank Of Cambodia.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/26.National Bank Of Cambodia.jpg" alt="" />
+        <h3>National Bank Of Cambodia</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/29.MINDEF HQ Brunei.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/29.MINDEF HQ Brunei.jpg" alt="" />
+        <h3>MINDEF HQ Brunei</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/30.World Trade Centre Qatar.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/30.World Trade Centre Qatar.jpg" alt="" />
+        <h3>World Trade Centre Qatar</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/33.Techcombank Vietnam.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/33.Techcombank Vietnam.jpg" alt="" />
+        <h3>Techcombank Vietnam</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/first/35. Suruhanjaya Tenaga Putrajaya 2C15.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/first/thumbs/35. Suruhanjaya Tenaga Putrajaya 2C15.jpg" alt="" />
+        <h3>Suruhanjaya Tenaga Putrajaya 2C15</h3>
+      </a>
+    </section><!-- end of section thumbnails-->
+    <section class="thumbnails">
+      <a href="/images/projects/bank admin govt/second/4.AIG Building Kuala Lumpur.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/4.AIG Building Kuala Lumpur.jpg" alt="" />
+        <h3>AIG Building Kuala Lumpur</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/7.TNB Kuantan Pahang.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/7.TNB Kuantan Pahang.jpg" alt="" />
+        <h3>TNB Kuantan Pahang</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/8.Standard Chartered Bank Menara Prime.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/8.Standard Chartered Bank Menara Prime.jpg" alt="" />
+        <h3>Standard Chartered Bank Menara Prime</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/12.Jabatan Perdana Menteri KL.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/12.Jabatan Perdana Menteri KL.jpg" alt="" />
+        <h3>Jabatan Perdana Menteri KL</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/13.Sime Darby Plantation, Ara Damansara.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/13.Sime Darby Plantation, Ara Damansara.jpg" alt="" />
+        <h3>Sime Darby Plantation, Ara Damansara</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/14.Citibank Capital Square.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/14.Citibank Capital Square.jpg" alt="" />
+        <h3>Citibank Capital Square</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/18.TRX Prudential.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/18.TRX Prudential.jpg" alt="" />
+        <h3>TRX Prudential</h3>
+      </a>
+    </section>
+    <section class="thumbnails">
+      <a href="/images/projects/bank admin govt/second/20.HSBC TRX.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/20.HSBC TRX.jpg" alt="" />
+        <h3>HSBC TRX</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/22.Great Eastern Life Assurance M Bhd Jalan Ampang.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/22.Great Eastern Life Assurance M Bhd Jalan Ampang.jpg" alt="" />
+        <h3>Great Eastern Life Assurance M Bhd Jalan Ampang</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/27.Pusat Pertahanan Awam Malaysia.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/27.Pusat Pertahanan Awam Malaysia.jpg" alt="" />
+        <h3>Pusat Pertahanan Awam Malaysia</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/31.Shimizu Corp (Republic Plaza) Singapore.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/31.Shimizu Corp (Republic Plaza) Singapore.jpg" alt="" />
+        <h3>Shimizu Corp (Republic Plaza) Singapore</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/32.Kuwait Embassy Brunei.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/32.Kuwait Embassy Brunei.jpg" alt="" />
+        <h3>Kuwait Embassy Brunei</h3>
+      </a>
+      <a href="/images/projects/bank admin govt/second/34.Istana Baru Kuala Terengganu.jpg" class="shadow">
+        <img src="/images/projects/bank admin govt/second/thumbs/34.Istana Baru Kuala Terengganu.jpg" alt="" />
+        <h3>Istana Baru Kuala Terengganu</h3>
+      </a>
+    </section><!-- end of section thumbnails-->
+
+    </section><!-- end of <section id="main"> -->
+    </div><!-- end of  <div id="wrapper" class="p-b-65"> -->
+  </div>
+
+  <div id="commercial" class="tabcontent">
+    <h3>Commercial</h3>
+  </div>
+
+  <div id="factory" class="tabcontent">
+    <h3>Factory &amp; Warehouse</h3>
+  </div>
+
+  <div id="highrise" class="tabcontent">
+    <h3>High Rise Building</h3>
+  </div>
+
+  <div id="hospital" class="tabcontent">
+    <h3>Hospital</h3>
+  </div>
+
+  <div id="hotel" class="tabcontent">
+    <h3>Hotel</h3>
+  </div>
+
+  <div id="infrastructure" class="tabcontent">
+    <h3>Infrastructures</h3>
+  </div>
+
+  <div id="mall" class="tabcontent">
+    <h3>Mall</h3>
+  </div>
+
+  <div id="mixed" class="tabcontent">
+    <h3>Infrastructures</h3>
+  </div>
+
+  <div id="residential" class="tabcontent">
+    <h3>Residential</h3>
+  </div>
+
+  <div id="stadium" class="tabcontent">
+    <h3>Stadium &amp; Public Centre</h3>
+  </div>
+  <div id="university" class="tabcontent">
+    <h3>University &amp; Education Centre<</h3>
+  </div>
+  <div id="others" class="tabcontent">
+    <h3>Others</h3>
+  </div>
+  </div>
 
 
 </section><!-- end of section thumbnails-->
@@ -352,62 +649,62 @@
 </div><!-- end of  <div id="wrapper" class="p-b-65"> -->
   </div><!--end of col-sm-9 -->
 <!-- InstanceEndEditable -->
-    <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-bluer">
-          <div class="container">
-              <div class="row">
-                  <div class="col-sm-12">
-                           <div class="col-sm-4" style="float:right">
-                          <img src="images/approved_by_bomba.png" class="approved_bottom_logo"> <img src="images/malaysian_brand.png" class="brand_bottom_logo"> <img src="images/ifc.png" class="ifc_bottom_logo"> <img src="images/iso.png" class="iso_bottom_logo"> <img src="images/responsible_care.png" class="responsible_bottom_logo">
-                      </div>
+<section class="p-b-55 p-t-75 xs-p-b-20 bg-master-bluer">
+      <div class="container">
+          <div class="row">
+              <div class="col-sm-12">
+                       <div class="col-sm-4" style="float:right">
+                      <img src="images/approved_by_bomba.png" class="approved_bottom_logo"> <img src="images/malaysian_brand.png" class="brand_bottom_logo"> <img src="images/ifc.png" class="ifc_bottom_logo"> <img src="images/iso.png" class="iso_bottom_logo"> <img src="images/responsible_care.png" class="responsible_bottom_logo">
                   </div>
-                  <div class="col-sm-4 col-xs-12 xs-m-b-40">
-                      <a href="index.html"><img src="images/logo_winduct.png" width="152" data-src-retina="../images/logo_winduct_2x.png" class="alt" alt="WinDuct Logo"></a>
-                      <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10" style="font-size: 18px !important;">Passive Fire Protection Sdn. Bhd.</h6>
-                      <p class="text-white ">No 27, Jalan Pengacara U1/48, Section U1, Temasya Industrial Park, 40150 Shah Alam, Selangor Darul Ehsan,Malaysia.
-                          <br/><strong>Tel:</strong> + (60)3-5569 5706 / 5707
-                          <br/><strong>Fax:</strong> + (60)3-5569 5708
-                          <br/><strong>Email: </strong> <a href="mailto:sales@winduct.com" target="_blank">sales@winduct.com</a> / <a href="mailto:winduct@gmail.com" target="_blank">winduct@gmail.com</a>
-                          <br/><strong>Website:</strong> <a href="index.html">www.winduct.com</a></p>
-                  </div>
-                  <div class="col-sm-2 col-xs-6 xs-m-b-20">
-                      <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">About Us </h6>
-                      <ul class="no-style">
-                          <li class="m-b-5 no-padding"><a href="about_winduct.html" class="link text-white ">About WinDuct®</a></li>
-                          <li class="m-b-5 no-padding"><a href="why_choose_winduct.html" class="link text-white">Why Choose WinDuct®</a></li>
-                          <li class="m-b-5 no-padding"><a href="winduct_quality.html" class="link text-white">Winduct® Quality Assurance</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-sm-2 col-xs-6 xs-m-b-20">
-                      <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">WinDuct®</h6>
-                      <ul class="no-style">
-                          <li class="m-b-5 no-padding"><a href="winduct_overview.html" class="link text-white ">WinDuct® Overview</a></li>
-                          <li class="m-b-5 no-padding"><a href="intunescent_coating.html" class="link text-white ">Intumescent Coating</a></li>
-                          <li class="m-b-5 no-padding"><a href="specifications.html" class="link text-white ">Specifications </a></li>
-                          <li class="m-b-5 no-padding"><a href="construction_details.html" class="link text-white">Construction Details</a></li>
-                          <li class="m-b-5 no-padding"><a href="before_after_test.html" class="link text-white">Before & After Test</a></li>
-                          <li class="m-b-5 no-padding"><a href="specifications.html" class="link text-white">Test Reports</a></li>
-                          <li class="m-b-5 no-padding"><a href="awards_recognitions.html" class="link text-white">Awards & Recognitions</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-sm-3 col-xs-6 xs-m-b-20">
-                      <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Project References</h6>
-                      <ul class="no-style">
-                          <li class="m-b-5 no-padding"><a href="project_references_local.html" class="link text-white ">Local</a></li>
-                          <li class="m-b-5 no-padding"><a href="project_references_oversea.html" class="link text-white ">Overseas</a></li>
-                      </ul>
-                  </div>
-                  <div class="col-sm-4 col-xs-6 xs-m-b-20">
-                      <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Follow Us</h6>
-                      <a style="float:left" href="https://twitter.com/winductpfp" target="_blank"><img style="padding-right:3px!important;" src="images/twitter.png" class="social_media m-l-10"></a>
-                      <a style="float:left" href="https://www.linkedin.com/in/winduct-passive-fire-protection-765040149/" target="_blank"><img style="padding-right:3px!important;" src="images/linkedin.png" class="social_media m-l-10"></a>
-                      <a style="float:left" href="https://www.facebook.com/WinDuct-201330609883660/" target="_blank"><img style="padding-right:3px!important;" src="images/facebook_icon.png" class="social_media"></a>
-                      <a style="float:left" href="https://www.youtube.com/channel/UC64HxgHcJ0ztb5HItR5WqGQ" target="_blank"><img style="padding-right:3px!important;" src="images/youtube_logo.png" class="social_media"></a>
-                    </div>
               </div>
-          <p class="fs-12 hint-text p-t-10 text-white center">Copyright © 2007 - <span class="currentYear">2017</span> by Passive Fire Protection Sdn. Bhd. - All Rights Reserved.</p>
-
+              <div class="col-sm-4 col-xs-12 xs-m-b-40">
+                  <a href="index.html"><img src="images/logo_winduct.png" width="152" data-src-retina="../images/logo_winduct_2x.png" class="alt" alt="WinDuct Logo"></a>
+                  <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10" style="font-size: 18px !important;">Passive Fire Protection Sdn. Bhd.</h6>
+                  <p class="text-white ">No 27, Jalan Pengacara U1/48, Section U1, Temasya Industrial Park, 40150 Shah Alam, Selangor Darul Ehsan,Malaysia.
+                      <br/><strong>Tel:</strong> + (60)3-5569 5706 / 5707
+                      <br/><strong>Fax:</strong> + (60)3-5569 5708
+                      <br/><strong>Email: </strong> <a href="mailto:sales@winduct.com" target="_blank">sales@winduct.com</a> / <a href="mailto:winduct@gmail.com" target="_blank">winduct@gmail.com</a>
+                      <br/><strong>Website:</strong> <a href="index.html">www.winduct.com</a></p>
+              </div>
+              <div class="col-sm-2 col-xs-6 xs-m-b-20">
+                  <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">About Us </h6>
+                  <ul class="no-style">
+                      <li class="m-b-5 no-padding"><a href="about_winduct.html" class="link text-white ">About WinDuct®</a></li>
+                      <li class="m-b-5 no-padding"><a href="why_choose_winduct.html" class="link text-white">Why Choose WinDuct®</a></li>
+                      <li class="m-b-5 no-padding"><a href="winduct_quality.html" class="link text-white">Winduct® Quality Assurance</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-2 col-xs-6 xs-m-b-20">
+                  <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">WinDuct®</h6>
+                  <ul class="no-style">
+                      <li class="m-b-5 no-padding"><a href="winduct_overview.html" class="link text-white ">WinDuct® Overview</a></li>
+                      <li class="m-b-5 no-padding"><a href="intunescent_coating.html" class="link text-white ">Intumescent Coating</a></li>
+                      <li class="m-b-5 no-padding"><a href="specifications.html" class="link text-white ">Specifications </a></li>
+                      <li class="m-b-5 no-padding"><a href="construction_details.html" class="link text-white">Construction Details</a></li>
+                      <li class="m-b-5 no-padding"><a href="before_after_test.html" class="link text-white">Before & After Test</a></li>
+                      <li class="m-b-5 no-padding"><a href="specifications.html" class="link text-white">Test Reports</a></li>
+                      <li class="m-b-5 no-padding"><a href="awards_recognitions.html" class="link text-white">Awards & Recognitions</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-3 col-xs-6 xs-m-b-20">
+                  <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Project References</h6>
+                  <ul class="no-style">
+                      <li class="m-b-5 no-padding"><a href="project_references_local.html" class="link text-white ">Local</a></li>
+                      <li class="m-b-5 no-padding"><a href="project_references_oversea.html" class="link text-white ">Overseas</a></li>
+                  </ul>
+              </div>
+              <div class="col-sm-4 col-xs-6 xs-m-b-20">
+                  <h6 class="font-montserrat text-uppercase fs-14 text-white p-b-10">Follow Us</h6>
+                  <a style="float:left" href="https://twitter.com/winductpfp" target="_blank"><img style="padding-right:3px!important;" src="images/twitter.png" class="social_media m-l-10"></a>
+                  <a style="float:left" href="https://www.linkedin.com/in/winduct-passive-fire-protection-765040149/" target="_blank"><img style="padding-right:3px!important;" src="images/linkedin.png" class="social_media m-l-10"></a>
+                  <a style="float:left" href="https://www.facebook.com/WinDuct-201330609883660/" target="_blank"><img style="padding-right:3px!important;" src="images/facebook_icon.png" class="social_media"></a>
+                  <a style="float:left" href="https://www.youtube.com/channel/UC64HxgHcJ0ztb5HItR5WqGQ" target="_blank"><img style="padding-right:3px!important;" src="images/youtube_logo.png" class="social_media"></a>
+                </div>
           </div>
-      </section>
+      <p class="fs-12 hint-text p-t-10 text-white center">Copyright © 2007 - <span class="currentYear"></span> by Passive Fire Protection Sdn. Bhd. - All Rights Reserved.</p>
+
+      </div>
+  </section>
     <script src="js/google.js" type="text/javascript"></script>
     <script src="js/pace.min.js" type="text/javascript"></script>
     <script src="js/jquery.min.js" type="text/javascript"></script>
@@ -419,6 +716,27 @@
     <script type="text/javascript" src="js/jquery.unveil.min.js"></script>
     <script type="text/javascript" src="js/pages.frontend.js"></script>
     <script src="js/custom.js" type="text/javascript"></script>
+    <script>
+    $( document ).ready(function() {
+    openCity(event, 'airport');
+    $(".currentYear").text(new Date().getFullYear());
+   });
+
+      function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+
+    </script>
 </body>
 
 <!-- InstanceEnd --></html>

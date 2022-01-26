@@ -101,7 +101,6 @@
         .tabcontent {
           display: none;
           padding: 6px 12px;
-          border: 1px solid #ccc;
           border-top: none;
           margin-bottom: 20px;
           text-align: center;
@@ -184,28 +183,39 @@
     <!-- InstanceBeginEditable name="body" --><div class="product_background"><section class="winduct_content"><div class="slides desktop_version"><img src="images/top_banner_15.png" /></div>
     <div class="container mobile_top_02">
   <div class="col-xs-height col-middle text-left">
-    <h1 class="inner p-b-50 m-b-20 text-white">All Projects V3</h1>
+    <h1 class="inner p-b-50 m-b-20 text-white">All Projects</h1>
   </div>
 </div></section>
-<div class="col-sm-12">
-  <div class="tab" style="padding-top:10px; padding-bottom:10px;">  <center>
-    <button class="btn-success tablinks" style="margin-bottom:10px;" onclick="openCity(event, 'viewall')">View All</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'airport')">Airport</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'bank')">Bank, Administrative &amp; Government</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'commercial')">Commercial</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'factory')">Factory &amp; Warehouse</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'highrise')">High Rise Building</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'hospital')">Hospital</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'hotel')">Hotel</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'infrastructure')">Infrastructures</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'mall')">Mall</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'mixed')">Mixed Development</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'residential')">Residential</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'stadium')">Stadium &amp; Public Centre</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'university')">University &amp; Education Centre</button>
-    <button class="btn-success tablinks" onclick="openCity(event, 'others')">Others</button></center>
-  </div>
-
+<div class="col-sm-3">
+  <!--Breadcrumbs-->
+  <ul class="breadcrumb"  style="padding-top:80px;">
+    <li  style="padding-top:10px;"><a href="/index.html">Home</a></li>
+    <li  style=""><a href="#">Projects</a></li>
+  </ul>
+<!--end of Breadcrumbs-->
+<!--Sidebar-->
+<ul class="breadcrumb"><li>
+<div class="" style="font-color:black!important;">
+  <a href="#" class="w3-bar-item w3-button">View All</a><br>
+  <a href="#mixed" class="w3-bar-item w3-button">Mixed Development</a><br>
+  <a href="#highrise" class="w3-bar-item w3-button" onclick="openCity(event, 'highrise')">High Rise Building</a><br>
+  <a href="#mall" class="w3-bar-item w3-button">Shopping Mall</a><br>
+  <a href="#hotel" class="w3-bar-item w3-button" onclick="openCity(event, 'hotel')">Hotel</a><br>
+  <a href="#hospital" class="w3-bar-item w3-button"  onclick="openCity(event, 'hospital')">Hospital</a><br>
+  <a href="#airport" class="w3-bar-item w3-button" onclick="openCity(event, 'airport')">Airport</a><br>
+  <a href="#infrastructure" class="w3-bar-item w3-button">Infrastructures</a><br>
+  <a href="#bank" class="w3-bar-item w3-button" onclick="openCity(event, 'bank')">Bank, Administrative &amp; Government</a><br>
+  <a href="#factory" class="w3-bar-item w3-button" onclick="openCity(event, 'factory')">Factory, Warehouse &amp; Distribution Centre</a><br>
+  <a href="#commercial" class="w3-bar-item w3-button" onclick="openCity(event, 'commercial')">Commercial</a><br>
+  <a href="#stadium" class="w3-bar-item w3-button" onclick="openCity(event, 'stadium')">Stadium &amp; Public Ammenities</a><br>
+  <a href="#university" class="w3-bar-item w3-button" onclick="openCity(event, 'university')">Universities &amp; Education Centre</a><br>
+  <a href="#residential" class="w3-bar-item w3-button" onclick="openCity(event, 'residential')">Residential Building</a><br>
+  <a href="#others" class="w3-bar-item w3-button" onclick="openCity(event, 'others')">Others</a><br>
+</div>
+<!--end of Sidebar-->
+</li></ul>
+</div>
+<div class="col-sm-9" style="padding-top:80px;">
   <div id="viewall" class="tabcontent">
     <div id="wrapper" class="p-b-65">
     <section id="main">
