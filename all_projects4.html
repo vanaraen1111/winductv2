@@ -116,6 +116,49 @@
 h3 {
   height: 45px!important;
 }
+
+/*sidenav*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.breadcrumb {
+  background-color: transparent!important;
+}
+
+/*end of sidenav*/
         /**/
     </style>
     <script src="js/google.js" type="text/javascript"></script>
@@ -131,36 +174,33 @@ h3 {
     <script src="js/custom.js" type="text/javascript"></script>
     <script>
 
-            $( document ).ready(function() {
-              var body = document.body,
-                  html = document.documentElement;
-
-                var height = Math.max( body.scrollHeight, body.offsetHeight,
-                                     html.clientHeight, html.scrollHeight, html.offsetHeight );
-              //  var height =  document.documentElement.scrollHeight;
-                    setHeightSidebar(height);
-            });
-
-
-    function setHeightSidebar(height){
-      console.log("setting height at "+height+" ...");
-      $(".sidebar-div").css("min-height",height);
-        $(".sidebar-div").load();
-    }
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
 
     </script>
     <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="css/main.css" /><!-- InstanceEndEditable -->
 </head>
 
-<body class="pace-dark windows desktop pace-done">
+<body style="margin-left:250px" class="pace-dark windows desktop pace-done">
     <div class="pace pace-inactive">
         <div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;">
             <div class="pace-progress-inner"></div>
         </div>
         <div class="pace-activity"></div>
     </div>
-    <nav class="header bg-header transparent-dark" data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
+    <nav class="header bg-header transparent-dark" data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark" style="margin-left:-250px">
         <div class="container relative">
             <div class="pull-left">
                 <div class="header-inner">
@@ -224,36 +264,34 @@ h3 {
   </div>
 </div></section>
 
-<div class="col-sm-3 product_background">
-  <!--Breadcrumbs-->
+<div class="col-sm-3 product_background sidenav" id="mySidenav" style="width:250px;marginLeft:250px">
   <ul class="breadcrumb">
     <li  style="padding-top:10px;"><a href="/index.html">Home</a></li>
     <li  style=""><a href="#">Projects</a></li>
   </ul>
-<!--end of Breadcrumbs-->
-<!--Sidebar-->
-<ul class="breadcrumb"><li>
-<div class="sidebar-div product_background" style="font-color:black!important;">
-  <a href="#" class="w3-bar-item w3-button">View All</a><br>
-  <a href="#mixed" class="w3-bar-item w3-button">Mixed Development</a><br>
-  <a href="#highrise" class="w3-bar-item w3-button" onclick="openCity(event, 'highrise')">High Rise Building</a><br>
-  <a href="#mall" class="w3-bar-item w3-button">Shopping Mall</a><br>
-  <a href="#hotel" class="w3-bar-item w3-button" onclick="openCity(event, 'hotel')">Hotel</a><br>
-  <a href="#hospital" class="w3-bar-item w3-button"  onclick="openCity(event, 'hospital')">Hospital</a><br>
-  <a href="#airport" class="w3-bar-item w3-button" onclick="openCity(event, 'airport')">Airport</a><br>
-  <a href="#infrastructure" class="w3-bar-item w3-button">Infrastructures</a><br>
-  <a href="#bank" class="w3-bar-item w3-button" onclick="openCity(event, 'bank')">Bank, Administrative &amp; Government</a><br>
-  <a href="#factory" class="w3-bar-item w3-button" onclick="openCity(event, 'factory')">Factory, Warehouse &amp; Distribution Centre</a><br>
-  <a href="#commercial" class="w3-bar-item w3-button" onclick="openCity(event, 'commercial')">Commercial</a><br>
-  <a href="#stadium" class="w3-bar-item w3-button" onclick="openCity(event, 'stadium')">Stadium &amp; Public Ammenities</a><br>
-  <a href="#university" class="w3-bar-item w3-button" onclick="openCity(event, 'university')">Universities &amp; Education Centre</a><br>
-  <a href="#residential" class="w3-bar-item w3-button" onclick="openCity(event, 'residential')">Residential Building</a><br>
-  <a href="#others" class="w3-bar-item w3-button" onclick="openCity(event, 'others')">Others</a><br>
+  <ul class="breadcrumb"><li>
+  <div class="sidebar-div product_background" style="font-color:black!important;">
+    <a href="#" class="w3-bar-item w3-button">View All</a><br>
+    <a href="#mixed" class="w3-bar-item w3-button">Mixed Development</a><br>
+    <a href="#highrise" class="w3-bar-item w3-button" onclick="openCity(event, 'highrise')">High Rise Building</a><br>
+    <a href="#mall" class="w3-bar-item w3-button">Shopping Mall</a><br>
+    <a href="#hotel" class="w3-bar-item w3-button" onclick="openCity(event, 'hotel')">Hotel</a><br>
+    <a href="#hospital" class="w3-bar-item w3-button"  onclick="openCity(event, 'hospital')">Hospital</a><br>
+    <a href="#airport" class="w3-bar-item w3-button" onclick="openCity(event, 'airport')">Airport</a><br>
+    <a href="#infrastructure" class="w3-bar-item w3-button">Infrastructures</a><br>
+    <a href="#bank" class="w3-bar-item w3-button" onclick="openCity(event, 'bank')">Bank, Administrative <br>&amp; Government<br>Buildings</a><br>
+    <a href="#factory" class="w3-bar-item w3-button" onclick="openCity(event, 'factory')">Factory, Warehouse &amp; <br>Distribution Centre</a><br>
+    <a href="#commercial" class="w3-bar-item w3-button" onclick="openCity(event, 'commercial')">Commercial</a><br>
+    <a href="#stadium" class="w3-bar-item w3-button" onclick="openCity(event, 'stadium')">Stadium &amp; Public <br>Ammenities</a><br>
+    <a href="#university" class="w3-bar-item w3-button" onclick="openCity(event, 'university')">Universities &amp;<br> Education Centre</a><br>
+    <a href="#residential" class="w3-bar-item w3-button" onclick="openCity(event, 'residential')">Residential Building</a><br>
+    <a href="#others" class="w3-bar-item w3-button" onclick="openCity(event, 'others')">Others</a><br>
+  </div>
+  <!--end of Sidebar-->
+  </li></ul>
 </div>
-<!--end of Sidebar-->
-</li></ul>
 </div>
-<div class="col-sm-9 product_background">
+<div class="col-sm-9 product_background" id="main" style="width:100%">
   <div id="viewall" class="tabcontent">
     <div id="wrapper" class="p-b-65">
     <section id="main">
@@ -617,7 +655,7 @@ h3 {
     <h3>Stadium &amp; Public Centre</h3>
   </div>
   <div id="university" class="tabcontent">
-    <h3>University &amp; Education Centre<</h3>
+    <h3>University &amp; Education Centre</h3>
   </div>
   <div id="others" class="tabcontent">
     <h3>Others</h3>
