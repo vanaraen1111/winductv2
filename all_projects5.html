@@ -76,7 +76,6 @@ body, html {
 .tabcontent {
   color: white!important;
   display: none;
-  padding: 100px 20px;
   height: 100%;
 }
 
@@ -102,9 +101,20 @@ width: 100%;
 
 div .main {
   text-align:center;
-  margin-top: 30px;
+  background-color:white!important;
 }
 
+div .main h1{
+  background-color:white!important;
+  color:white!important;
+}
+
+
+
+div #categories .col-sm-3{
+  text-align:center!important;
+  flost:center!important;
+}
 #Home {background-color: white;}
 #News {background-color: white;}
 #Contact {background-color: white;}
@@ -131,6 +141,36 @@ div .main {
   display: table;
   clear: both;
 }
+
+/*project highlight gallery css*/
+
+
+.row > .column {
+  padding: 0 8px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column {
+  float: left;
+  width: 25%;
+}
+img {
+  margin-bottom: -4px;
+}
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+/*project highlight gallery css ENDS here*/
+
     </style>
     <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="css/main.css" />
@@ -147,9 +187,6 @@ div .main {
 <script type="text/javascript" src="js/pages.frontend.js"></script>
 <script src="js/custom.js" type="text/javascript"></script>
 <script>
-var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-trigger: 'focus'
-})
 
 function openPage(pageName,elmnt) {
   var i, tabcontent, tablinks;
@@ -238,42 +275,107 @@ document.getElementById("defaultOpen").click();
 
 
 <div class="projects-menubar" style="text-align:center!important;">
-<button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)"  onmouseout="closePage('highlights', this)" >Project Highlights</button>
-<button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" onmouseout="closePage('categories', this)" id="defaultOpen">Project Categories</button>
+<button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)" >Project Highlights</button>
+<button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" id="defaultOpen">Project Categories</button>
 <!--<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>-->
-<div id="highlights" class="tabcontent">
+<div id="highlights" class="tabcontent" onmouseleave="closePage('highlights', this) " style="padding-bottom:20px;">
   <h3>Project Highlights</h3>
-  <p>Home is where the heart is..</p>
+  <div class="row">
+  <div class="column">
+    <img src="nature.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="img_snow.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="mountainskies.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
 </div>
 
-<div id="categories" class="tabcontent">
-  <h3>Project Categories</h3>
-  <p>Some news this fine day!</p>
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="img_nature_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="img_snow_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="img_mountains_wide.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 4</div>
+      <img src="img_lights_wide.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="img_nature_wide.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_snow_wide.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_mountains_wide.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="img_lights_wide.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+    </div>
+  </div>
+</div>
+
+
+
+</div>
+<div id="categories" class="tabcontent" onmouseleave="closePage('categories', this)">
+<h2>Project Categories</h2>
+<center>
+<div class="col-sm-3">
+  <ul class="list-group list-group-flush">
+  <a href="#" class="list-group-item list-group-item-action">MIXED DEVELOPMENT</a>
+  <a href="#" class="list-group-item list-group-item-action">HIGH RISE BUILDING</a>
+  <a href="#" class="list-group-item list-group-item-action">SHOPPING MALLs</a>
+  <a href="#" class="list-group-item list-group-item-action">HOTEL</a>
+  <a href="#" class="list-group-item list-group-item-action">HOSPITAL</a>
+  <a href="#" class="list-group-item list-group-item-action">AIRPORT</a>
+</ul>
+
+</div>
+
+<div class="col-sm-3">
+  <ul class="list-group list-group-flush">
+  <a class="list-group-item">BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS</a>
+  <a class="list-group-item">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a>
+  <a class="list-group-item">STADIUM & PUBLIC AMMENITIES</a>
+  <a class="list-group-item">UNIVERSITY & EDUCATION CENTRE</a>
+  <a class="list-group-item">OTHERS</a>
+</ul>
+</div>
+</center>
+</div>
+
 </div>
 </div>
 <div class="main">
-  <h1>GALLERY CONTENT</h1>
-  <!-- Photo Grid -->
-  <div class="row">
-    <div class="column">
-    <img src="wedding.jpg" style="width:100%">
-    <img src="rocks.jpg" style="width:100%">
-    <img src="falls2.jpg" style="width:100%">
-    <img src="paris.jpg" style="width:100%">
-    <img src="nature.jpg" style="width:100%">
-    <img src="mist.jpg" style="width:100%">
-    <img src="paris.jpg" style="width:100%">
-    </div>
-    <div class="column">
-    <img src="underwater.jpg" style="width:100%">
-    <img src="ocean.jpg" style="width:100%">
-    <img src="wedding.jpg" style="width:100%">
-    <img src="mountainskies.jpg" style="width:100%">
-    <img src="rocks.jpg" style="width:100%">
-    <img src="underwater.jpg" style="width:100%">
-    </div>
-
-  </div>
+  <h2>GALLERY CONTENT</h2>
+  <h2>GALLERY CONTENT</h2>
+  <h2>GALLERY CONTENT</h2>
+  <h2>GALLERY CONTENT</h2>
 </div>
     <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-bluer">
           <div class="container">
@@ -345,9 +447,6 @@ document.getElementById("defaultOpen").click();
     <script type="text/javascript" src="js/pages.frontend.js"></script>
     <script src="js/custom.js" type="text/javascript"></script>
     <script>
-    var popover = new bootstrap.Popover(document.querySelector('.popover-dismiss'), {
-  trigger: 'focus'
-})
 
     function openPage(pageName,elmnt) {
       var i, tabcontent, btnlinks;
