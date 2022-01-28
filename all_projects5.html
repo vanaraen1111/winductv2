@@ -93,6 +93,11 @@ width: 100%;
 .projects-menubar button:hover{
   font-weight: bold;
   box-shadow: inset 0 -4px 0 0 black;
+  color: black!important;
+  float:  center;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 div .main {
@@ -233,8 +238,8 @@ document.getElementById("defaultOpen").click();
 
 
 <div class="projects-menubar" style="text-align:center!important;">
-<button type="button" class="btn btn-outline-primary btn-lg" onmouseover="openPage('highlights', this)"  onmouseout="closePage('highlights', this)" >Project Highlights</button>
-<button type="button" class="btn btn-outline-primary btn-lg"  onmouseover="openPage('categories', this)" onmouseout="closePage('categories', this)" id="defaultOpen">Project Categories</button>
+<button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)"  onmouseout="closePage('highlights', this)" >Project Highlights</button>
+<button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" onmouseout="closePage('categories', this)" id="defaultOpen">Project Categories</button>
 <!--<a tabindex="0" class="btn btn-lg btn-danger" role="button" data-bs-toggle="popover" data-bs-trigger="focus" title="Dismissible popover" data-bs-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a>-->
 <div id="highlights" class="tabcontent">
   <h3>Project Highlights</h3>
@@ -345,14 +350,14 @@ document.getElementById("defaultOpen").click();
 })
 
     function openPage(pageName,elmnt) {
-      var i, tabcontent, tablinks;
+      var i, tabcontent, btnlinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
+      btnlinks = document.getElementsByClassName("btnlink");
+      for (i = 0; i < btnlinks.length; i++) {
+        btnlinks[i].style.backgroundColor = "";
       }
       document.getElementById(pageName).style.display = "block";
     }
@@ -361,14 +366,14 @@ document.getElementById("defaultOpen").click();
     document.getElementById("defaultOpen").click();
 
     function closePage(pageName,elmnt) {
-      var i, tabcontent, tablinks;
+      var i, tabcontent, btnlinks;
       tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
-      tablinks = document.getElementsByClassName("tablink");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].style.backgroundColor = "";
+      btnlinks = document.getElementsByClassName("btnlink");
+      for (i = 0; i < btnlinks.length; i++) {
+        btnlinks[i].style.backgroundColor = "";
       }
       document.getElementById(pageName).style.display = "none";
     }
