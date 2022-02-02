@@ -53,13 +53,14 @@
 body, html {
   height: 100%;
   width:100%!important;
-  overflow:none!important;
+  overflow-y:none;
   margin: 0;
   font-family: Arial;
 }
 
 #navbarNav {
   float:right!important;
+  margin-left: auto!important;
 }
 
 /* Style tab links */
@@ -95,10 +96,8 @@ overflow: none!important;
 background-color: white!important;
 position: fixed!important;
 top: 250!important;
-width: 100%!important;
+/*width: 100%!important;*/
 margin-bottom: 700px!important;
-border: 1px!important;
-border-color: red!important;
 }
 
 .projects-menubar button:hover{
@@ -125,7 +124,7 @@ div .main h1{
 
 div #categories .col-sm-3{
   text-align:center!important;
-  flost:center!important;
+  float:center!important;
 }
 #Home {background-color: white;}
 #News {background-color: white;}
@@ -190,7 +189,7 @@ img.hover-shadow {
 .fixed {
     position:fixed;
     top:0;
-    margin-top:80px;
+    margin-top:63px;
 
 }
 
@@ -213,14 +212,17 @@ h1 {
 }
 
 .responsive {
-  width: auto!important;
+  width:auto!important;
   height: auto!important;
+  /*min-width:1250px!important;*/
 }
 
-body, html {
+
+body {
     height: 100%!important;
-      width: 100%!important;
+    width: 100%!important;
     font-style: roboto;
+    overflow-x: hidden!important;
 }
 
 .bg-dark {
@@ -232,8 +234,19 @@ background-color: black!important;
   float: right!important;
 
 }
+@media all and (min-width: 360px) {
 
+    h1 {
+      font: 44px;
+    }
+}
 
+@media all and (max-width: 359px) {
+
+    h1 {
+      font: 22px;
+    }
+}
     </style>
     <!-- InstanceBeginEditable name="head" -->
 <link rel="stylesheet" href="css/main.css" />
@@ -323,49 +336,54 @@ background-color: black!important;
 <div class="container">
   <div class="row">
         <!--<nav class="navbar navbar-expand-lg navbar-dark  transparent-dark pull-right" data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark" >-->
-        <nav class="navbar navbar-expand-lg navbar-dark transparent-dark pull-right bg-dark" data-pages-resize-class="dark"  style="position:fixed;  top:0; width:100%;">
+        <nav class="header bg-header navbar navbar-expand-lg navbar-dark ms-auto transparent-dark"  style="font-family:'Montserrat'!important; position:fixed;  top:0; width:100%;"  data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
               <div class="container-fluid">
-              <a href="index.html"><img src="images/logo_winduct.png" width="152" data-src-retina="images/logo_winduct_2x.png" class="logo" alt=""></a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+              <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon "></span>
               </button>
-              <div class="collapse navbar-collapse pull-right" id="navbarNav" >
-                <ul class="navbar-nav">
+              <div class="collapse navbar-collapse" id="navbarNav" >
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                  <a href="index.html"><img src="images/logo_winduct.png" width="152" data-src-retina="images/logo_winduct_2x.png" class="logo" alt=""><img src="images/logo_winduct.png" width="152" data-src-retina="images/logo_winduct_2x.png" class="alt" alt=""></a>
+                  </li>
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">WinDuct®</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link" href="#">Project References</a>
                   </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+                  <!--
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
+                  </li>-->
                 </ul>
               </div>
               </div>
         </nav>
   </div><!--end of row-->
-  <div class="row">
-    <div class="col-md-12">
-      <div class="">
-        <img class="responsive" style="margin-left:-26.8px!important;" src="images/top_banner_15.png" />  <h1 class="marker-position-banner">Local Project References</h1>
+      <div class="responsive">
+        <img style="margin-left:-26.8px!important;" src="images/top_banner_15.png" />  <h1 class="marker-position-banner">Local Project References</h1>
       </div>
-    </div>
-  </div>
 <div class="row">
 <div class="projects-menubar" style="text-align:center!important;">
 <button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)" >Project Highlights</button>
 <button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" id="defaultOpen">Project Categories</button>
-<div id="highlights" class="tabcontent" onmouseleave="closePage('highlights', this) " style="padding-bottom:20px;">
+<div id="highlights" class="tabcontent" onmouseleave="closePage('highlights', this) " style="padding-bottom:20px; ">
   <h3>Project Highlights</h3>
 </div>
 <div id="categories" class="tabcontent" onmouseleave="closePage('categories', this)">
 <h2>Project Categories</h2>
 <center>
-<div class="pull-left" style="" >
+<div class="pull-left" style="col-sm-3" >
   <ul class="list-group list-group-flush">
   <a href="#" class="list-group-item list-group-item-action">MIXED DEVELOPMENT</a>
   <a href="#" class="list-group-item list-group-item-action">HIGH RISE BUILDING</a>
@@ -380,7 +398,7 @@ background-color: black!important;
 
 </div>
 
-<div class="pull-right" style="">
+<div class="pull-right" style="col-sm-3">
   <ul class="list-group list-group-flush">
   <a class="list-group-item">BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS</a>
   <a class="list-group-item">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a>
@@ -389,7 +407,6 @@ background-color: black!important;
   <a class="list-group-item">OTHERS</a>
 </ul>
 </div>
-<div class="col-md-6"><br></div>
 </center>
 
 </div><!--categories-->
@@ -425,23 +442,20 @@ background-color: black!important;
 </div><!-- end of container-->
     <script>
 
-  /*  $(document).ready(function(){
-      let elem = document.querySelector('div .marker-position-banner');
-      let rect = elem.getBoundingClientRect();
-      let offsety = 230;
-      let yPosition = rect.y + offsety;
-      console.log("y: "+ rect.y);
-      $('.projects-menubar').css("top",+yPosition);
+    $(document).ready(function(){
+      /*const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+      console.log("vw: "+vw);
+      $('.projects-menubar').attr("width",vw);*/
     });
 
-    $(window).on('resize', function(){
-      let elem = document.querySelector('div .marker-position-banner');
-      let rect = elem.getBoundingClientRect();
-      let offsety = 230;
-      let yPosition = rect.y + offsety;
-      console.log("y: "+ rect.y);
-      $('.projects-menubar').css("top",+yPosition);
-    });*/
+  /*  $(window).on('resize', function(){
+          let elem = document.querySelector('div .marker-position-banner');
+          let rect = elem.getBoundingClientRect();
+          let offsety = 230;
+          let yPosition = rect.y + offsety;
+          console.log("y: "+ rect.y);
+          $('.projects-menubar').css("top",+yPosition);
+        });*/
 
     var num = 220; //number of pixels before modifying styles
 
