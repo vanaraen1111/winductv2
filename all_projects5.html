@@ -335,9 +335,66 @@ background-color: black!important;
     </nav>-->
 <div class="container">
   <div class="row">
-        <!--<nav class="navbar navbar-expand-lg navbar-dark  transparent-dark pull-right" data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark" >-->
-        <nav class="header bg-header navbar navbar-expand-lg navbar-dark ms-auto transparent-dark"  style="font-family:'Montserrat'!important; position:fixed;  top:0; width:100%;"  data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
-              <div class="container-fluid">
+    <!--<nav class="header bg-header transparent-dark" data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
+        <div class="container relative">
+            <div class="pull-left">
+                <div class="header-inner">
+                    <a href="index.html"><img src="images/logo_winduct.png" width="152" data-src-retina="images/logo_winduct_2x.png" class="logo" alt=""><img src="images/logo_winduct.png" width="152" data-src-retina="images/logo_winduct_2x.png" class="alt" alt=""></a>
+                </div>
+            </div>
+            <div class="pull-right">
+                <div class="header-inner">
+                    <div class="visible-sm-inline visible-xs-inline menu-toggler pull-right p-l-10" data-pages="header-toggle" data-pages-element="#header">
+                        <div class="one"></div>
+                        <div class="two"></div>
+                        <div class="three"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-content mobile-dark pull-right clearfix" data-pages-direction="slideRight" id="header">
+                <div class="pull-right"><a href="#" class="padding-10 visible-xs-inline visible-sm-inline pull-right m-t-10 m-b-10 m-r-10" data-pages="header-toggle" data-pages-element="#header"><i class=" pg-close_line"></i></a></div>
+                <div class="header-inner">
+                    <ul class="menu">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li class="classic"><a href="javascript:;">About Us <i class="pg-arrow_minimize m-l-5"></i></a>
+                            <nav class="classic "><span class="arrow"></span>
+                                <ul>
+                                    <li><a href="about_winduct.html">About WinDuct®</a></li>
+                                    <li><a href="why_choose_winduct.html">Why Choose WinDuct®?</a></li>
+                                    <li><a href="winduct_quality.html">Winduct® Quality Assurance</a></li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="classic"><a href="javascript:;">WinDuct® <i class="pg-arrow_minimize m-l-5"></i></a>
+                            <nav class="classic "><span class="arrow"></span>
+                                <ul>
+                                    <li><a href="winduct_overview.html">WinDuct® Overview</a></li>
+                                    <li><a href="intunescent_coating.html">Intumescent Coating</a></li>
+                                    <li><a href="specifications.html">Specifications</a></li>
+                                    <li><a href="construction_details.html">Construction Details</a></li>
+                                    <li><a href="before_after_test.html">Before & After Test</a></li>
+                                    <li><a href="test_report.html">Test Reports</a></li>
+                                    <li><a href="awards_recognitions.html">Awards & Recognitions</a></li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class="classic"><a href="javascript:;">Project References <i class="pg-arrow_minimize m-l-5"></i></a>
+                            <nav class="classic "><span class="arrow"></span>
+                                <ul>
+                                    <li><a href="project_references_local.html">Local</a></li>
+                                    <li><a href="project_references_oversea.html">Overseas</a></li>
+                                </ul>
+                            </nav>
+                        </li>
+                        <li class=""><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </nav>-->
+        <nav class="header bg-header navbar navbar-expand-lg navbar-dark ms-auto transparent-dark bg-dark"  style="font-family:'montserrat'!important;font-size:14px!important;font-weight:bold!important;text-transform: uppercase!important; position:fixed;  top:0; width:100%;"  data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
+              <div class="container-fluid bg-dark">
               <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "></span>
               </button>
@@ -349,22 +406,36 @@ background-color: black!important;
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">About Us</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      About Us
+                    </a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="about_winduct.html">About WinDuct®</a></li>
+                      <li><a class="dropdown-item" href="why_choose_winduct.html">Why Choose WinDuct®?</a></li>
+                      <li><a class="dropdown-item" href="winduct_quality.html">Winduct® Quality Assurance</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown2" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      WinDuct®
+                    </a>
+                    <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown2">
+                      <li><a class="dropdown-item" href="winduct_overview.html">WinDuct® Overview</a></li>
+                      <li><a class="dropdown-item" href="intunescent_coating.html">Intumescent Coating</a></li>
+                      <li><a class="dropdown-item" href="specifications.html">Specifications</a></li>
+                      <li><a class="dropdown-item" href="construction_details.html">Construction </a></li>
+                      <li><a class="dropdown-item" href="before_after_test.html">Before & After Test</a></li>
+                      <li><a class="dropdown-item" href="test_report.html">Test Reports</a></li>
+                      <li><a class="dropdown-item" href="awards_recognitions.html">Awards & Recognitions</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">WinDuct®</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Project References</a>
+                    <a class="nav-link" href="all_projects5.html">Project References</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Contact Us</a>
                   </li>
-                  <!--
-                  <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Contact Us</a>
-                  </li>-->
                 </ul>
               </div>
               </div>
