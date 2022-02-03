@@ -2106,10 +2106,8 @@ h4 {
     font-size: 50px;
     line-height:50px;
     letter-spacing: -0.0045em;
-    -webkit-text-stroke-width: 1px;
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
-	color: yellow;
-   -webkit-text-stroke-color: black;
+	color: white;
     /*text-shadow: -5px 1px 2px black;*/
 	color:white !important
 

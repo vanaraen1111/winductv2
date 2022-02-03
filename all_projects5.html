@@ -209,11 +209,11 @@ background-color: black!important;
 }
 
 /** ALL FLEX AND GALLERY GRID HERE **/
-.container-1{
+.container-1, .container-2{
   display: flex!important;
   flex-wrap: wrap!important;
   justify-content: space-around!important;
-  align-item:center!important;
+  align-item:start!important;
   align-content: center!important;
 
 }
@@ -230,19 +230,11 @@ background-color: black!important;
 
 .caption {
   background-color:black!important;
+  font-size: 18px;
   color:white!important;
   font-weight: bold!important;
   text-transform: uppercase!important;
   text-align:center!important;
-
-}
-
-.container-2{
-  display: flex!important;
-  justify-content: space-around!important;
-  align-item:center!important;
-  align-content: center!important;
-  flex-wrap: wrap!important;
 
 }
 
@@ -479,25 +471,25 @@ background-color: black!important;
 <div class="">
   <ul class="list-group list-group-flush">
   <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'MIXED DEVELOPMENT')" >MIXED DEVELOPMENT</a>
-  <a href="#" class="list-group-item list-group-item-action">HIGH RISE BUILDING</a>
-  <a href="#" class="list-group-item list-group-item-action">SHOPPING MALLS</a>
-  <a href="#" class="list-group-item list-group-item-action">HOTEL</a>
-  <a href="#" class="list-group-item list-group-item-action">HOSPITAL</a>
-  <a href="#" class="list-group-item list-group-item-action">AIRPORT</a>
-  <a href="#" class="list-group-item list-group-item-action">INFRASTRUCTURE</a>
-  <a href="#" class="list-group-item list-group-item-action">COMMERCIAL</a>
-  <a href="#" class="list-group-item list-group-item-action">RESIDENTIAL</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'HIGH RISE BUILDING')">HIGH RISE BUILDING</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'SHOPPING MALLS')">SHOPPING MALLS</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'HOTEL')">HOTEL</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'HOSPITAL')">HOSPITAL</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'AIRPORT')">AIRPORT</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'INFRASTRUCTURE')">INFRASTRUCTURE</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'COMMERCIAL')">COMMERCIAL</a>
+  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'RESIDENTIAL')">RESIDENTIAL</a>
 </ul>
 
 </div>
 
 <div class="">
   <ul class="list-group list-group-flush">
-  <a class="list-group-item">BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS</a>
-  <a class="list-group-item">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a>
-  <a class="list-group-item">STADIUM & PUBLIC AMMENITIES</a>
-  <a class="list-group-item">UNIVERSITY & EDUCATION CENTRE</a>
-  <a class="list-group-item">OTHERS</a>
+  <a class="list-group-item" onclick="openProject(this,'BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS')">BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS</a>
+  <a class="list-group-item" onclick="openProject(this,'FACTORY, WAREHOUSES & DISTRIBUTION CENTRE')">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a>
+  <a class="list-group-item" onclick="openProject(this,'STADIUM & PUBLIC AMMENITIES')">STADIUM & PUBLIC AMMENITIES</a>
+  <a class="list-group-item" onclick="openProject(this,'UNIVERSITY & EDUCATION CENTRE')">UNIVERSITY & EDUCATION CENTRE</a>
+  <a class="list-group-item" onclick="openProject(this,'OTHERS')">OTHERS</a>
 </ul>
 </div>
 </center>
@@ -513,51 +505,7 @@ background-color: black!important;
 <div class="main7" style="background-color:white;"><center>
   <br>
 <h3 class="projTitle" style="padding-top:15px;background-color:white;"></h3>
-<!-- photo grid sample-->
-<!-- Photo Grid -->
-<!--
-<div class="row">
-  <div ="mixeddev">
-  <div class="column">
-    <img src="wedding.jpg" style="width:100%">
-    <img src="rocks.jpg" style="width:100%">
-    <img src="falls2.jpg" style="width:100%">
-    <img src="paris.jpg" style="width:100%">
-    <img src="nature.jpg" style="width:100%">
-    <img src="mist.jpg" style="width:100%">
-    <img src="paris.jpg" style="width:100%">
-  </div>
-
-  <div class="column">
-    <img src="underwater.jpg" style="width:100%">
-    <img src="ocean.jpg" style="width:100%">
-    <img src="wedding.jpg" style="width:100%">
-    <img src="mountainskies.jpg" style="width:100%">
-    <img src="rocks.jpg" style="width:100%">
-    <img src="underwater.jpg" style="width:100%">
-  </div>
-
-  <div class="column">
-    <img src="wedding.jpg" style="width:100%">
-    <img src="rocks.jpg" style="width:100%">
-    <img src="falls2.jpg" style="width:100%">
-    <img src="paris.jpg" style="width:100%">
-    <img src="nature.jpg" style="width:100%">
-    <img src="mist.jpg" style="width:100%">
-    <img src="paris.jpg" style="width:100%">
-  </div>
-
-  <div class="column">
-    <img src="underwater.jpg" style="width:100%">
-    <img src="ocean.jpg" style="width:100%">
-    <img src="wedding.jpg" style="width:100%">
-    <img src="mountainskies.jpg" style="width:100%">
-    <img src="rocks.jpg" style="width:100%">
-    <img src="underwater.jpg" style="width:100%">
-  </div>
-</div>
-</div>-->
-<div class="row">
+<div class="row mixed" style="display:none;">
 <div class="container-1">
   <div class="flexbox-item box-1-1">
     <img src="images/projects/mixed developments/Mix Development Highlight/thumbs/14 TRX Development.jpg"></img>
@@ -722,6 +670,11 @@ background-color: black!important;
 
     function openProject(elmnt,text){
       $(".projTitle").text(text);
+      if (text === 'MIXED DEVELOPMENT'){
+      $(".mixed").show();
+    } else {
+      $(".mixed").hide();
+    }
       closePage('categories', elmnt);
 
     }
