@@ -11,7 +11,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-auto-rows:minmax(160px, 500px);
+  grid-template-rows: repeat(6, 1fr);
   grid-gap: 5px;
 
 }
@@ -41,12 +41,12 @@
 
 .onePerColumn{
   grid-column: span 3;
-  grid-row: span 4;
+  grid-row: span 6;
 }
 
 .twoPerColumn{
   grid-column: span 3;
-  grid-row: span 2;
+  grid-row: span 3;
 }
 
 .threePerColumn{
@@ -59,8 +59,8 @@
   width:100%;
   height:94%;
   object-fit:cover;
-}
 
+}
 
 
 </style>
@@ -75,9 +75,11 @@
   <div class="grid-item onePerRow"><img src="images/projects/hotel/Hotel Highlights/1 Westin Hotel, KL.jpg"></img>Westin Hotel</div>
   <div class="grid-item onePerRow"><img src="images/projects/hotel/Hotel Highlights/14 Hilton Hotel Manilla Philippines.jpg"></img>Hilton Hotel Manila Philippines</div>
   <div class="grid-item onePerRow"><img  src="images/projects/hotel/Hotel Highlights/10 EQ Hotel.jpg"></img>EQ Hotel</div>
-  <div class="grid-item onePerColumn"><img  src="images/projects/hotel/Hotel Highlights/13 Raddison Hotel Sri Lanka.jpg"></img>Radisson Hotel</div>
+
+  <div class="grid-item onePerColumn"><img src="images/projects/hotel/Hotel Highlights/13 Raddison Hotel Sri Lanka.jpg"></img>Radisson Hotel</div>
   <div class="grid-item twoPerColumn"><img src="images/projects/hotel/Hotel Highlights/9 Hotel Okura Phillipines.jpg"></img>Hotel Okura Philippines</div>
-  <div class="grid-item twoPerColumn"><img  src="images/projects/hotel/Hotel Highlights/4 E_O Hotel Penang.jpg"></img>Eastern &amp; Oriental Hotel</div>
+  <div class="grid-item twoPerColumn"><img src="images/projects/hotel/Hotel Highlights/4 E_O Hotel Penang.jpg"></img>Eastern &amp; Oriental Hotel</div>
+
   <div class="grid-item twoPerRow"><img  src="images/projects/hotel/Hotel Highlights/2 Nikko Hotel KL.jpg"></img>Nikko Hotel</div>
   <div class="grid-item twoPerRow"><img  src="images/projects/hotel/Hotel Highlights/7 Mariott Hotel Penang.jpg"></img>Mariott Hotel</div>
 
@@ -90,8 +92,8 @@
   <!--two per column, 3 per column-->
   <div class="grid-item twoPerColumn"><img src="images/projects/hotel/Hotel Others/Royale Pavillion Hotel.jpg"></img>Royale Pavillion Hotel</div>
   <div class="grid-item twoPerColumn"><img src="images/projects/hotel/Hotel Others/JW MARRIOTT MARQUIS.jpeg"></img>W Marriott Marquis</div>
-  <div class="grid-item twoPerColumn"><img src="images/projects/hotel/Hotel Others/Gurney Hotel.jpeg"></img>Gurney Hotel</div>
-  <div class="grid-item twoPerColumn"><img  src="images/projects/hotel/Hotel Others/Ibis Hotel.jpg"></img>Ibis Hotel</div>
+  <div class="grid-item threePerColumn"><img src="images/projects/hotel/Hotel Others/Gurney Hotel.jpeg"></img>Gurney Hotel</div>
+  <div class="grid-item threePerColumn"><img  src="images/projects/hotel/Hotel Others/Ibis Hotel.jpg"></img>Ibis Hotel</div>
   <div class="grid-item threePerColumn"><img src="images/projects/hotel/Hotel Others/Awana Resort Langkawi.jpg"></img>Awana Resort</div>
 
   <div class="grid-item threePerRow"><img src="images/projects/hotel/Hotel Others/Sheraton Doha.jpg"></img>Sheraton Hotel Doha</div>
