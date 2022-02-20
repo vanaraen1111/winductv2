@@ -210,6 +210,14 @@ background-color: black!important;
 
 
 /** ALL FLEX AND GALLERY GRID ENDS HERE **/
+.left {
+    float: start;
+}
+
+.right {
+    float: end;
+}
+
 
     </style>
     <!-- InstanceBeginEditable name="head" -->
@@ -305,28 +313,22 @@ background-color: black!important;
 </div>
 <div id="categories" class="tabcontent" onmouseleave="closePage('categories', this)" >
 <center>
-<div class="">
+<div class="" style="overflow-y:scroll">
   <ul class="list-group list-group-flush">
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'MIXED DEVELOPMENT')" >MIXED DEVELOPMENT</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'HIGH RISE BUILDING')">HIGH RISE BUILDING</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'SHOPPING MALLS')">SHOPPING MALLS</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'HOTEL')">HOTEL</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'HOSPITAL')">HOSPITAL</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'AIRPORT')">AIRPORT</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'INFRASTRUCTURE')">INFRASTRUCTURE</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'COMMERCIAL')">COMMERCIAL</a>
-  <a href="#" class="list-group-item list-group-item-action" onclick="openProject(this,'RESIDENTIAL')">RESIDENTIAL</a>
-</ul>
-
-</div>
-
-<div class="">
-  <ul class="list-group list-group-flush">
-  <a class="list-group-item" onclick="openProject(this,'BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS')">BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS</a>
-  <a class="list-group-item" onclick="openProject(this,'FACTORY, WAREHOUSES & DISTRIBUTION CENTRE')">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a>
-  <a class="list-group-item" onclick="openProject(this,'STADIUM & PUBLIC AMMENITIES')">STADIUM & PUBLIC AMMENITIES</a>
-  <a class="list-group-item" onclick="openProject(this,'UNIVERSITY & EDUCATION CENTRE')">UNIVERSITY & EDUCATION CENTRE</a>
-  <a class="list-group-item" onclick="openProject(this,'OTHERS')">OTHERS</a>
+  <a href="#" class="list-group-item list-group-item-action pull-right" onclick="openProject(this,'MIXED DEVELOPMENT')" >MIXED DEVELOPMENT</a>
+  <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HIGH RISE BUILDING')">HIGH RISE BUILDING</a>
+  <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'SHOPPING MALLS')">SHOPPING MALLS</a>
+  <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HOTEL')">HOTEL</a>
+  <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HOSPITAL')">HOSPITAL</a>
+  <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'AIRPORT')">AIRPORT</a>
+  <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'INFRASTRUCTURE')">INFRASTRUCTURE</a>
+  <a href="#" class="list-group-item list-group-item-action float-end" onclick="openProject(this,'COMMERCIAL')">COMMERCIAL</a>
+  <a href="#" class="list-group-item list-group-item-action float-end" onclick="openProject(this,'RESIDENTIAL')">RESIDENTIAL</a>
+  <a class="list-group-item float-end" onclick="openProject(this,'BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS')">BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS</a>
+  <a class="list-group-item float-end" onclick="openProject(this,'FACTORY, WAREHOUSES & DISTRIBUTION CENTRE')">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a>
+  <a class="list-group-item float-end" onclick="openProject(this,'STADIUM & PUBLIC AMMENITIES')">STADIUM & PUBLIC AMMENITIES</a>
+  <a class="list-group-item float-end" onclick="openProject(this,'UNIVERSITY & EDUCATION CENTRE')">UNIVERSITY & EDUCATION CENTRE</a>
+  <a class="list-group-item float-end" onclick="openProject(this,'OTHERS')">OTHERS</a>
 </ul>
 </div>
 </center>
@@ -417,7 +419,7 @@ background-color: black!important;
       if (text === 'SHOPPING MALLS') $("#content").load("mall.html");
       if (text === 'HOTEL') $("#content").load("hotel.html");
       else {
-        $("#content").load("testlayout.html"); //temporary for testing
+      //  $("#content").load("testlayout.html"); //temporary for testing
       }
       closePage('categories', elmnt);
 

@@ -64,6 +64,7 @@
      /* Hide the images by default */
      .mySlides {
       display: none;
+      width: 100%;
      }
 
      /* Add a pointer when hovering over the thumbnail images */
@@ -427,8 +428,13 @@ At WinDuct, we have extensive network of strategic alliances with local and fore
             </div><!--end of col sm-6-->
             <div class="col-sm-6">
             <div class="card-body" style="height:100%">
-              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZSEhn1nvB1o?autoplay=1&mute=1"><!--&mute=1-->
-              </iframe>
+            <!--  <iframe width="100%" height="100%" src="https://www.youtube.com/embed/ZSEhn1nvB1o?autoplay=1&mute=1">
+            </iframe>-->
+            <video width="100%" height="100%" controls>
+              <source src="/video/index.mp4" type="video/mp4">
+              Your browser does not support HTML video.
+            </video>
+
             </div>
           </div><!--end of col sm-6-->
           </div><!-- end of row-->
@@ -470,7 +476,6 @@ At WinDuct, we have extensive network of strategic alliances with local and fore
                 <div class="card-body">
                   <!--Beginning of gallery slider-->
                   <!-- Container for the image gallery -->
-                  <div class="container">
                    <!-- Full-width images with number text -->
                    <div class="mySlides">
                      <div class="numbertext">1 / 6</div>
