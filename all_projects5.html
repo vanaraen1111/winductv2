@@ -7,7 +7,6 @@
 <title>WinDuct® - Malaysia Project and Contribution</title><meta name=keywords content="MiTEC, First World Hotel, Pavilion, KLIA2, Sunway Pyramid, St. Regis Hotel, Teega Residence, WinDuct"><meta name=description content="WindDuct installed in many of Malaysia's most prestigious buildings, including MiTEC, First World Hotel, Pavilion, KLIA2, Sunway Pyramid, St. Regis Hotel and Teega Residence."><meta name=og:url content="http://winduct.com/project_references_local.html" /><meta name=og:title content="WinDuct® - Malaysia Project and Contribution"><meta name=og:description content="WindDuct installed in many of Malaysia's most prestigious buildings, including MiTEC, First World Hotel, Pavilion, KLIA2, Sunway Pyramid, St. Regis Hotel and Teega Residence."><meta name=rights content=WinDuct><meta property="og:site_name" content="WinDuct® - Malaysia Project and Contribution" /><!-- InstanceEndEditable -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <script type="text/javascript" async="" src="js/ga.js"></script>
-    <script type="text/javascript" async="" src="js/slideshow.js"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="images/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="images/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="images/apple-icon-72x72.png">
@@ -368,7 +367,7 @@ background-color: black!important;
           $(".currentYear").text(new Date().getFullYear());
       });
 
-      var num = 220; //number of pixels before modifying styles
+      var num = 120; //number of pixels before modifying styles
 
       $(window).bind('scroll', function () {
         if ($(window).scrollTop() > num) {
@@ -408,14 +407,15 @@ background-color: black!important;
         btnlinks[i].style.backgroundColor = "";
       }
       document.getElementById(pageName).style.display = "none";
-      $(elem).closest("h3").text("");
+      $(elmnt).closest("h3").text("");
     }
 
     function openProject(elmnt,text){
       $(".projTitle").text(text);
-      if (text === 'MIXED DEVELOPMENT'){
-        $("#content").load("mixeddevelopment.html");
-    }
+      if (text === 'MIXED DEVELOPMENT') $("#content").load("mixeddevelopment.html");
+      if (text === 'HIGH RISE BUILDING') $("#content").load("highrise.html");
+      if (text === 'SHOPPING MALLS') $("#content").load("mall.html");
+      if (text === 'HOTEL') $("#content").load("hotel.html");
       closePage('categories', elmnt);
 
     }
