@@ -306,10 +306,11 @@ background-color: black!important;
 <div class="projects-menubar" style="margin-top:15px;text-align:center!important;background-color:white!important;">
   <div class="container-fluid">
     <div class = "thebuttons" style="text-align:center!important;">
-<button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)" >Project Highlights</button>
-<button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" id="defaultOpen">Project Categories</button>
+<button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)" id="defaultOpen">Project Highlights</button>
+<button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" >Project Categories</button>
 
-<div id="highlights" class="tabcontent" onmouseleave="closePage('highlights', this) " style="padding-bottom:20px; ">
+<div id="highlights" class="tabcontent" onmouseleave="openPage('highlights', this) " style="padding-bottom:20px; ">
+  <h3>Project Highlights</h3>
 </div>
 <div id="categories" class="tabcontent" onmouseleave="closePage('categories', this)" >
 <center>
@@ -339,7 +340,9 @@ background-color: black!important;
 </div><!--projects-menubar-->
 
 <div id="highlights" class="tabcontent" onmouseleave="closePage('highlights', this) " style="padding-bottom:20px; ">
+  <div id="content">
 
+  </div><!-- end of content-->
 </div>
 <div class="main7" style="background-color:white;"><center>
   <br>
@@ -378,7 +381,10 @@ background-color: black!important;
             $('.projects-menubar .thebuttons').removeClass('fixed');
         }
       });
+      // Get the element with id="defaultOpen" and click on it
 
+
+         $("defaultOpen").trigger('hover');
     })
 
     function openPage(pageName,elmnt) {
@@ -395,8 +401,7 @@ background-color: black!important;
 
     }
 
-    // Get the element with id="defaultOpen" and click on it
-    document.getElementById("defaultOpen").click();
+
 
     function closePage(pageName,elmnt) {
       var i, tabcontent, btnlinks;
