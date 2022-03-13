@@ -9,20 +9,20 @@
       font-style: roboto;
 }
 
-.row {
+ .row {
   display: flex;
   flex-wrap: wrap;
   padding: 0 4px;
 }
 
 /* Create four equal columns that sits next to each other */
-.column {
+ .column {
   flex: 25%;
   max-width: 25%;
   padding: 0 4px;
 }
 
-.column img {
+ .column img {
   margin-top: 8px;
   vertical-align: middle;
   width: 100%;
@@ -38,7 +38,7 @@
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-  .column {
+   .column {
     flex: 100%;
     max-width: 100%;
   }
@@ -54,6 +54,16 @@
   font-size : 1.2vw;
 }
 
+body {
+    margin: 0;            /* Reset default margin */
+}
+iframe {
+    display: block;       /* iframes are inline by default */
+    background: #000;
+    border: none;         /* Reset default border */
+    height: 100%;        /* Viewport-relative units */
+    width: 100%;
+}
 
 
 </style>
@@ -69,7 +79,7 @@
       <div class="grid-item"><img src="images/projects/malls/Mall Highlight/11 Diamond Mall Cambodia.jpg">11 Diamond Mall Cambodia</div>
       <div class="grid-item"><img src="images/projects/bank admin govt/first/24.The Supreme People_s Court Vietnam.jpg">tThe Supreme People's Court Vietnam</div>
       <div class="grid-item"><img src="images/projects/hotel/Hotel Highlights/Shangri la hotel.webp">Shangri la hotel</div>
-      <div class="grid-item"><img src="images/projects/factory and warehouse/first/15.B.Braun ll Penang.jpg">BBraun ll Penang</div>
+
 
     </div>
     <div class="column">
@@ -88,7 +98,6 @@
       <div class="grid-item"><img src="images/projects/bank admin govt/first/29.MINDEF HQ Brunei.jpg">MINDEF HQ Brunei</div>
       <div class="grid-item"><img src="images/projects/hospital/Hospital Highlight/5 Thompson Hospital Kota Damansara Selangor.jpg">Thompson Hospital Kota Damansara Selangor</div>
       <div class="grid-item"><img src="images/projects/infrastructures/first/7 MCC Territory _ Transport Interchange Manakau.jpg">MDC Territory Transport Interchange Manakau</div>
-      <div class="grid-item"><img src=""></div>
     </div>
     <div class="column">
       <div class="grid-item"><img src="images/projects/stadium and public centre/first/25.Stadium Multipurpose Hall, Lusail, Qatar.jpg">Stadium Multipurpose Hall, Lusail, Qatar</div>
@@ -97,8 +106,13 @@
       <div class="grid-item"><img src="images/projects/bank admin govt/first/29.MINDEF HQ Brunei.jpg">MINDEF HQ Brunei.jpg</div>
       <div class="grid-item"><img src="images/projects/high rise/High Rise Highlights/1 Suria KLCC.jpg">Suria KLCC</div>
       <div class="grid-item"><img src="images/projects/infrastructures/first/8 Doha Metroline Qatar.jpg">Doha Metroline Qatar</div>
+      <div class="grid-item"><img src="images/projects/factory and warehouse/first/15.B.Braun ll Penang.jpg">BBraun II Penang</div>
     </div>
   </div>
 </div>
+  <!--<iframe src="stadium.html"></iframe>-->
 </body>
+
+
+
 </html>
