@@ -237,6 +237,14 @@
               $(".currentYear").text(new Date().getFullYear());
           });
 
+          var positionLeft = $(".firerated").offset().left;
+          var positionRight = $(".firerated").offset().right;
+          console.log("positionLeft firerated: "+positionLeft);
+          console.log("positionRight firerated: "+positionRight);
+          var positionLeft2 = $(".twohour").offset().left;
+          var positionRight2 = $(".twohour").offset().right;
+          console.log("positionLeft twohour: "+positionLeft2);
+          console.log("positionRight twohour: "+positionLeft2);
     });
 
     // Next/previous controls
@@ -367,8 +375,9 @@
                                         <div class="col-xs-height col-middle text-left">
                                             <div class="container">
                                                 <div class="col-md-12 no-padding col-xs-10 col-xs-offset-1" style="text-align:right;">
-                                                    <h1 class="light sm-text-center" data-swiper-parallax="-15%" style="transform: translate3d(0%, 0px, 0px); transition-duration: 0ms;" style="font-weight: bold;" ><!--<p class="sth" style="color:white!important;font: montserrat!important;font-size:80px;letter-spacing:15px;padding-bottom:50px;">WELCOME</p>--><div style="text-align:left!important;margin-left:110px;"><strong>2 Hours</strong></div> </h1>
-                                                    <h4 class="sm-text-center">Fire Rated Smoke Extraction Ductwork System</h4>
+                                                    <h1 class="light sm-text-center" data-swiper-parallax="-15%" style="transform: translate3d(0%, 0px, 0px); transition-duration: 0ms;" style="font-weight: bold;" ><!--<p class="sth" style="color:white!important;font: montserrat!important;font-size:80px;letter-spacing:15px;padding-bottom:50px;">WELCOME</p>-->
+                                                    <div class="twohour" style="text-align:right!important;"><strong>2 Hours&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong></div> </h1>
+                                                    <div><h4 class="sm-text-center firerated">Fire Rated Smoke Extraction Ductwork System</h4></div>
                                                     <br><button class="btn-danger" onclick="location.href = '/about_winduct.html'" style="float:right!important;margin-right:150px!important;">Learn More</button></div>
                                             </div>
                                         </div>
@@ -555,7 +564,7 @@ At WinDuct®, we have extensive network of strategic alliances with local and fo
                 <div class="card-body">
                   <!--<center><div class="responsive"><img style="height:500px; width:700px;" src="distributions.jpg"></img></div></center>-->
                   <center><div class="responsive"><img style="height:500px; width:700px;" src="world map.png"></img></div></center>
-                  <center><div class="responsive"><img style="height:500px; width:700px;" src="wordcloud.svg"></img></div></center>
+                  <center><div class="responsive" style="font-weight:bold!important;font-size:18px;font-style:italic;">&bull;Australia&nbsp;&bull;Austria&nbsp;&bull;Bahrain&nbsp;&bull;Cambodia&nbsp;&bull;Chile&nbsp;&bull;Hong Kong&nbsp;&bull;India&nbsp;&bull;Indonesia&nbsp;&bull;Kuwait&nbsp;&bull;Macau&nbsp;&bull;Mongolia&nbsp;&bull;Myanmar&nbsp;&bull;New Zealand&nbsp;&bull;Oman&nbsp;&bull;Phillipines&nbsp;&bull;Qatar&nbsp;&bull;Romania&nbsp;&bull;Serbia&nbsp;&bull;Singapore&nbsp;&bull;Sri Lanka&nbsp;&bull;Taiwan&nbsp;&bull;Tanzania&nbsp;&bull;Thailand&nbsp;&bull;UAE&nbsp;&bull;Vietnam</div></center>
                 </div><!--end of card body-->
                         </div><!--end of "col-sm-12-->
                       </div><!-- end of row-->
