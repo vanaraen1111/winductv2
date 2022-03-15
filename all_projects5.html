@@ -306,17 +306,51 @@ background-color: black!important;
 <div class="projects-menubar" style="margin-top:15px;text-align:center!important;background-color:white!important;">
   <div class="container-fluid">
     <div class = "thebuttons" style="text-align:center!important;">
-<button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)" onclick="openProject(this,'VIEW ALL')">Project Highlights</button>
 <button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" >Project Categories</button>
+<button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)" onclick="openProject(this,'VIEW ALL')">Project Highlights</button>
+
 
 <div id="highlights" class="tabcontent" onmouseleave="closePage('highlights', this) " style="padding-bottom:20px; ">
 </div>
 <div id="categories" class="tabcontent" onmouseleave="closePage('categories', this)" >
 <center>
-<div class="" style="overflow-y:scroll">
-  <ul class="list-group list-group-flush">
+<div>
+<!--  <ul class="list-group list-group-flush" style="height:600px!important;font-size:11px!important;">-->
+      <ul class="list-group list-group-flush">
+    <table>
+      <tr>
+        <td><a href="#" class="list-group-item list-group-item-action pull-right" onclick="openProject(this,'MIXED DEVELOPMENT')" >MIXED DEVELOPMENT</a></td>
+        <td><a href="#" class="list-group-item list-group-item-action pull-right" onclick="openProject(this,'HIGH RISE BUILDING')">HIGH RISE BUILDING</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'SHOPPING MALLS')">SHOPPING MALLS</a></td>
+        <td><a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HOTEL')">HOTEL</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HOSPITAL')">HOSPITAL</a></td>
+        <td><a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'AIRPORT')">AIRPORT</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'INFRASTRUCTURE')">INFRASTRUCTURE</a></td>
+        <td><a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'COMMERCIAL')">COMMERCIAL</a></td>
+      </tr>
+      <tr>
+        <td><a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'RESIDENTIAL')">RESIDENTIAL</a></td>
+        <td><a class="list-group-item list-group-item-action float-start" onclick="openProject(this,'BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS')">BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS</a></td>
+      </tr>
+      <tr>
+        <td><a class="list-group-item list-group-item-action float-start" onclick="openProject(this,'FACTORY, WAREHOUSES & DISTRIBUTION CENTRE')">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a></td>
+        <td><a class="list-group-item list-group-item-action float-start" onclick="openProject(this,'STADIUM & PUBLIC AMMENITIES')">STADIUM & PUBLIC AMMENITIES</a></td>
+      </tr>
+      <tr>
+        <td><a class="list-group-item list-group-item-action float-start" onclick="openProject(this,'UNIVERSITY & EDUCATION CENTRE')">UNIVERSITY & EDUCATION CENTRE</a></td>
+        <td><a class="list-group-item list-group-item-action float-start" onclick="openProject(this,'OTHERS')">OTHERS</a></td>
+      </tr>
+
+    </table>
+<!--
   <a href="#" class="list-group-item list-group-item-action pull-right" onclick="openProject(this,'MIXED DEVELOPMENT')" >MIXED DEVELOPMENT</a>
-  <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HIGH RISE BUILDING')">HIGH RISE BUILDING</a>
+ <a href="#" class="list-group-item list-group-item-action pull-right" onclick="openProject(this,'HIGH RISE BUILDING')">HIGH RISE BUILDING</a>
   <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'SHOPPING MALLS')">SHOPPING MALLS</a>
   <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HOTEL')">HOTEL</a>
   <a href="#" class="list-group-item list-group-item-action float-start" onclick="openProject(this,'HOSPITAL')">HOSPITAL</a>
@@ -328,7 +362,7 @@ background-color: black!important;
   <a class="list-group-item float-end" onclick="openProject(this,'FACTORY, WAREHOUSES & DISTRIBUTION CENTRE')">FACTORY, WAREHOUSES & DISTRIBUTION CENTRE</a>
   <a class="list-group-item float-end" onclick="openProject(this,'STADIUM & PUBLIC AMMENITIES')">STADIUM & PUBLIC AMMENITIES</a>
   <a class="list-group-item float-end" onclick="openProject(this,'UNIVERSITY & EDUCATION CENTRE')">UNIVERSITY & EDUCATION CENTRE</a>
-  <a class="list-group-item float-end" onclick="openProject(this,'OTHERS')">OTHERS</a>
+  <a class="list-group-item float-end" onclick="openProject(this,'OTHERS')">OTHERS</a>-->
 </ul>
 </div>
 </center>
@@ -378,11 +412,12 @@ background-color: black!important;
           $(".currentYear").text(new Date().getFullYear());
       });
 
-      var num = 120; //number of pixels before modifying styles
+      var num = 110; //number of pixels before modifying styles
 
       $(window).bind('scroll', function () {
         if ($(window).scrollTop() > num) {
             $('.projects-menubar .thebuttons').addClass('fixed');
+
         } else {
             $('.projects-menubar .thebuttons').removeClass('fixed');
         }
@@ -394,7 +429,7 @@ openProject(this,'VIEW ALL')
 
     function openPage(pageName,elmnt) {
       var i, tabcontent, btnlinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
+    tabcontent = document.getElementsByClassName("tabcontent");
       for (i = 0; i < tabcontent.length; i++) {
         tabcontent[i].style.display = "none";
       }
@@ -439,10 +474,13 @@ openProject(this,'VIEW ALL')
       if (text === 'UNIVERSITY & EDUCATION CENTRE') $("#content").load("university.html"); //new
       if (text === 'OTHERS') $("#content").load("others.html"); //new
 
-
       else {
       //  $("#content").load("testlayout.html"); //temporary for testing
       }
+      $("html, body").animate({
+                 scrollTop: 0
+             }, "fast");
+
       closePage('categories', elmnt);
 
     }
