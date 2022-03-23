@@ -217,7 +217,7 @@ background-color: black!important;
 .right {
     float: end;
 }
-
+/*
 .pace {
 	-webkit-pointer-events: none;
 	pointer-events: none;
@@ -414,7 +414,7 @@ background-color: black!important;
 
 .pace.pace-inactive {
 	display: none;
-}
+}*/
 
     </style>
     <!-- InstanceBeginEditable name="head" -->
@@ -637,7 +637,7 @@ background-color: black!important;
         'height': 'auto'
       })
       //hide loading bar
-      $(".pace").hide();
+    //  $(".pace").hide();
       //	$(".spinner-border").hide();
         var num = 110; //number of pixels before modifying styles
 
@@ -693,6 +693,7 @@ background-color: black!important;
       if (text === 'SHOPPING MALLS') $("#content").load("mall.html");
       if (text === 'HOTEL') $("#content").load("hotel.html");
       if (text === 'HOSPITAL') $("#content").load("hospital.html");
+      if (text === 'AIRPORT') $("#content").load("airport.html");
       if (text === 'COMMERCIAL') $("#content").load("commercial.html");
       if (text === 'RESIDENTIAL') $("#content").load("residential2.html");
       if (text === 'BANK, ADMINISTRATIVE & GOVERNMENT BUILDINGS') $("#content").load("bank.html");
