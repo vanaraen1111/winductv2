@@ -416,6 +416,8 @@ background-color: black!important;
 	display: none;
 }*/
 
+.pace .pace-progress {background: red!important;height:15px;}
+
     </style>
     <!-- InstanceBeginEditable name="head" -->
 <!--<link rel="stylesheet" href="css/main.css" />-->
@@ -431,6 +433,7 @@ background-color: black!important;
 <script type="text/javascript" src="js/pages.frontend.js"></script>
 <!--<script src="js/custom.js" type="text/javascript"></script>-->
 <script>
+
 
 </script>
 </head>
@@ -501,7 +504,7 @@ background-color: black!important;
 <!--<center><div class="spinner-border text-success" role="status">
   <span class="sr-only"></span>
 </div></center>-->
-    <div class="container">
+    <div class="container page">
 <div class="projects-menubar" style="margin-top:15px;text-align:center!important;background-color:white!important;">
   <div class="container-fluid">
     <div class = "thebuttons" style="text-align:center!important;">
@@ -612,6 +615,7 @@ background-color: black!important;
 
 
     $(document).ready( function() {
+      console.log($(".pace .pace-progress").width());
       //loading bar starts
 	  //  $(".spinner-border").show();
     $(".projects-menubar").hide();
@@ -625,10 +629,14 @@ background-color: black!important;
         'height': '100%'
       })
 
+        $ ('.page').hide();
 
-    })
+    });
 
     $(window).load(function() {
+
+        $ ('.page').show();
+
       $(".projects-menubar").show();
       openProject(this,'VIEW ALL')
       //enable scrolling
