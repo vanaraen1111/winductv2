@@ -164,7 +164,10 @@ h1 {
     height: 26px!important;
     padding: 0!important;
 }
-
+.header.bg-header
+{
+  height:50px!important;
+}
 .container {
   width:100%!important;
   max-width: 100%!important;
@@ -174,6 +177,12 @@ h1 {
   width:auto!important;
   height: auto!important;
   /*min-width:1250px!important;*/
+}
+
+.responsive-banner {
+  width:1366px!important;
+  height: auto!important;
+
 }
 
 
@@ -416,7 +425,7 @@ background-color: black!important;
 	display: none;
 }*/
 
-.pace .pace-progress {background: red!important;height:15px;}
+.pace .pace-progress {background: red!important;height:10px;}
 
     </style>
     <!-- InstanceBeginEditable name="head" -->
@@ -449,7 +458,7 @@ background-color: black!important;
     </div>
 <div class="container">
   <div class="row">
-        <nav class="header bg-header navbar navbar-expand-lg navbar-dark ms-auto transparent-dark bg-dark"  style="font-family:'montserrat'!important;font-size:14px!important;font-weight:bold!important;text-transform: uppercase!important; position:fixed;  top:0; width:100%;"  data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
+        <nav class="header bg-header navbar navbar-expand-lg navbar-dark ms-auto transparent-dark bg-dark"  style="font-family:'montserrat'!important;font-size:14px!important;font-weight:bold!important;text-transform: uppercase!important; position:fixed;  top:0; width:100%; padding-top:15px!important;"  data-pages="header" data-pages-header="autoresize" data-pages-resize-class="dark">
               <div class="container-fluid bg-dark">
               <button class="navbar-toggler me-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon "></span>
@@ -498,7 +507,7 @@ background-color: black!important;
         </nav>
   </div><!--end of row-->
       <div>
-        <img class="responsive" style="padding-left:-900px;" src="images/top_banner_15.png" />  <h1 class="marker-position-banner">Project References</h1>
+        <img class="responsive-banner" style="padding-left:-900px;" src="images/top_banner_15.png" />  <h1 class="marker-position-banner">Project References</h1>
       </div>
 </div><!-- end of container-->
 <!--<center><div class="spinner-border text-success" role="status">
@@ -652,10 +661,6 @@ if ($('#categories:hover').length != 0) {
 $("#categories").mouseleave(function() {
       closePage('categories', this);
 });
-
-
-
-
 
     jQuery(window).load(function () {
     $ ('.page').show();
