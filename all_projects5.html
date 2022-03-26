@@ -509,13 +509,13 @@ background-color: black!important;
   <div class="container-fluid">
     <div class = "thebuttons" style="text-align:center!important;">
 <button type="button" class="btn btn-outline-primary btn-lg btnlink" onmouseover="openPage('highlights', this)" onclick="openProject(this,'VIEW ALL')">Project Highlights</button>
-<button type="button" class="btn btn-outline-primary btn-lg btnlink"  onmouseover="openPage('categories', this)" >Project Categories</button>
+<button  id="categories-parent" type="button" class="btn btn-outline-primary btn-lg btnlink cat"  onmouseover="openPage('categories', this)" >Project Categories</button>
 
 
 
 <div id="highlights" class="tabcontent" onmouseleave="closePage('highlights', this) " style="padding-bottom:20px; ">
 </div>
-<div id="categories" class="tabcontent" onmouseleave="closePage('categories', this)" >
+<div id="categories" class="tabcontent cat">
 <center>
 <div id="ul1" style="display:none;">
   <ul class="list-group list-group-flush" style="height:600px!important;font-size:11px!important;">
@@ -633,33 +633,68 @@ background-color: black!important;
 
     });
 
+/*$(".cat").mouseleave(function() {
+  if($(this).is("#categories") || $(this).is("#categories-parent")) {
+  closePage('categories', this);
+}
+});*/
+
+
+$("#categories-parent").mouseleave(function() {
+if ($('#categories:hover').length != 0) {
+    // do not close
+} else {
+    closePage('categories', this);
+}
+}
+);
+
+$("#categories").mouseleave(function() {
+      closePage('categories', this);
+});
+
+
+
+
+
+    jQuery(window).load(function () {
+    $ ('.page').show();
+
+  $(".projects-menubar").show();
+  openProject(this,'VIEW ALL')
+  //enable scrolling
+  $('html, body').css({
+    'overflow': 'auto',
+    'height': 'auto'
+  })
+  //hide loading bar
+//  $(".pace").hide();
+  //	$(".spinner-border").hide();
+    var num = 110; //number of pixels before modifying styles
+
+    $(window).bind('scroll', function () {
+      if ($(window).scrollTop() > num) {
+          $('.projects-menubar .thebuttons').addClass('fixed');
+          $('#ul1').show();
+          $('#ul2').hide();
+      } else {
+          $('.projects-menubar .thebuttons').removeClass('fixed');
+          $('#ul1').hide();
+          $('#ul2').show();
+      }
+    });
+
+
+});
+
+    if(document.readyState === 'complete') {
+
+
+
+
+    }
+
     $(window).load(function() {
-
-        $ ('.page').show();
-
-      $(".projects-menubar").show();
-      openProject(this,'VIEW ALL')
-      //enable scrolling
-      $('html, body').css({
-        'overflow': 'auto',
-        'height': 'auto'
-      })
-      //hide loading bar
-    //  $(".pace").hide();
-      //	$(".spinner-border").hide();
-        var num = 110; //number of pixels before modifying styles
-
-        $(window).bind('scroll', function () {
-          if ($(window).scrollTop() > num) {
-              $('.projects-menubar .thebuttons').addClass('fixed');
-              $('#ul1').show();
-              $('#ul2').hide();
-          } else {
-              $('.projects-menubar .thebuttons').removeClass('fixed');
-              $('#ul1').hide();
-              $('#ul2').show();
-          }
-        });
 
     });
 
