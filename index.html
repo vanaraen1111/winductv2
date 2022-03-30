@@ -233,7 +233,7 @@
 
     $( document ).ready(function() {
           showSlides(slideIndex);
-          $("footer").load("footer.html",()=>{
+          $("#ftr").load("footer.html",()=>{
               $(".currentYear").text(new Date().getFullYear());
           });
 
@@ -697,9 +697,9 @@ At WinDuct®, we have extensive network of strategic alliances with local and fo
                       </center>
               </div><!--end of div-->
         </section>
-        <footer>
+        <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-darker" id ="ftr">
 
-        </footer>
+          </section>
         </div>
 
       </div>
