@@ -233,9 +233,6 @@
 
     $( document ).ready(function() {
           showSlides(slideIndex);
-          $("#ftr").load("footer.html",()=>{
-              $(".currentYear").text(new Date().getFullYear());
-          });
 
           var positionLeft = $(".firerated").offset().left;
           var positionRight = $(".firerated").offset().right;

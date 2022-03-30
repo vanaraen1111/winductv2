@@ -736,12 +736,7 @@ $("#categories").mouseleave(function() {
     'overflow': 'auto',
     'height': 'auto'
   })
-  //hide loading bar
-//  $(".pace").hide();
-  //	$(".spinner-border").hide();
-    var num = 110; //number of pixels before modifying styles
-    var footerposition =  $("#ftr").position().top;
-    console.log("footerposition: "+footerposition);
+    var num = 100; //number of pixels before modifying styles
 
 
     $(window).bind('scroll', function () {
@@ -749,11 +744,6 @@ $("#categories").mouseleave(function() {
           $('.projects-menubar .thebuttons').addClass('fixed');
           $('#ul1').show();
           $('#ul2').hide();
-      }
-
-      if ($(window).scrollTop() > footerposition){
-      //  console.log("yo");
-    //    alert("yo");
       }
 
       else {
