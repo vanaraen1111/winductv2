@@ -36,6 +36,7 @@
     <meta name="apple-touch-fullscreen" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <link href="css/pace-theme-flash.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap5/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="css/swiper.css" rel="stylesheet" type="text/css" media="screen">
@@ -50,15 +51,210 @@
         .cf-invisible {
             visibility: hidden;
         }
+
+        * {
+          box-sizing: border-box;
+            font: Roboto;
+         }
+
+        /* Position the image container (needed to position the left and right arrows) */
+        .container {
+         position: relative;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+         display: none;
+         width: 100%;
+        }
+
+        /* Add a pointer when hovering over the thumbnail images */
+        .cursor {
+         cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+         cursor: pointer;
+         position: absolute;
+         top: 40%;
+         width: auto;
+         padding: 16px;
+         margin-top: -50px;
+         color: white;
+         font-weight: bold;
+         font-size: 20px;
+         border-radius: 0 3px 3px 0;
+         user-select: none;
+         -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+         right: 0;
+         border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+     /*   .prev:hover,
+        .next:hover {
+         background-color: rgba(0, 0, 0, 0.8);
+        }*/
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+         color: #f2f2f2;
+         font-size: 12px;
+         padding: 8px 12px;
+         position: absolute;
+         top: 0;
+        }
+
+        /* Container for image text */
+        .caption-container {
+         text-align: center;
+         background-color: #222;
+         padding: 2px 16px;
+         color: white;
+        }
+
+        .row:after {
+         content: "";
+         display: table;
+         clear: both;
+        }
+
+        /* Six columns side by side */
+        .column {
+         float: left;
+         width: 25%;
+         max-height: 200px;
+        }
+
+        /* Add a transparency effect for thumnbail images */
+        .demo {
+         opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+         opacity: 1;
+        }
+
+        .hero-image {
+          background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)), url("winduct_overview.png")!important;
+          height: 300px!important;
+          background-position: center!important;
+          background-repeat: no-repeat!important;
+          background-size: cover!important;
+          position: relative!important;
+        }
+
+
+        .hero-text {
+          text-align: center!important;
+          position: absolute!important;
+          top: 50%!important;
+          left: 50%!important;
+          transform: translate(-50%, -50%)!important;
+          color: white!important;
+        }
+
+
+
+        body, html {
+            height: 100%!important;
+            font-style: roboto;
+        }
+
+        .caption-container {
+          height:30px!important;
+        }
+
+
+        .prev {
+             background-color: transparent;
+        }
+
+        .card-title {
+          font-size: 26px!important;
+          text-transform: uppercase;
+          font-weight: bold!important;
+        }
+
+
+        :not(card-title) {
+          font-weight: normal!important;
+         }
+
+
+        /*body {
+          min-height: 100vh!important;
+          position: relative!important;
+          margin: 0!important;
+          box-sizing: border-box!important;
+          padding-bottom: 500px!important; //height of the footer
+        }*/
+        /*
+        .footer {
+          position: absolute!important;
+          height: 100px!important;
+          width: 100%!important;
+        }*/
+        .card {
+          border: 0px;
+        }
+
+        h4 {
+          font-color:white!important;
+        }
+
+        .responsive {
+          width:auto!important;
+          height: auto!important;
+        }
+
     </style>
       <script type="text/javascript" async="" src="js/ga.js"></script>
     <script type="text/javascript" async="" src="js/slideshow.js"></script>
+       <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
     <script>
 
-    $( document ).ready(function() {
+        // Next/previous controls
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
 
+        // Thumbnail image controls
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
 
+    //automated carousells - 2 sec
+        function showSlides() {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
 
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+          setTimeout(showSlides, 5000); // Change image every 2 seconds
+        }
+
+    $(document).ready(function() {
+      $("#winductstory").load("winduct_story.html");
+      $("#winduct_overview_card").load("winduct_overview_card.html");
+      $("#worlwidedist").load("worldwide_distribution.html");
+      $("#featuredproject").load("featured_project.html").then(showSlides(0));
     });
 
     </script>
@@ -182,53 +378,33 @@
                 </div>
             </div>
         </section>
-        <div class="front_page_background ">
-            <section class="front_thumbnails p-l-20 p-r-20">
-                <div class="col-sm-6 front_box shadow m-r-20 m-t-20 m-b-20">
-                    <center>
-                        <h2 class="p-b-5 welcome_title">WELCOME TO <strong>WINDUCT</strong></h2></center>
-                    <p>Passive Fire Protection Sdn Bhd was established in 1996 and has since been actively involved in the Passive Fire Protection as well as Active Fire Protection system. Manned by a group of professional technical staff and ex-fire services officer who are expert and strong skilled in the construction industry, Passive Fire Protection Sdn Bhd represent a wide range of fire resistance products.</p>
-                </div>
-                <div class="col-sm-6 front_box shadow m-r-20 m-t-20 m-b-20">
-                    <div>
-                        <a href="http://www2.ipay88.com/video/Winduct_Animaution.mp4" target="_blank">
-                            <center><img alt="" class="m-b-20 video_photo" src="images/winduct_video.png"></center>
-                        </a>
-                    </div>
-                    </img>
-                    <a href="http://www2.ipay88.com/video/Winduct_Animaution.mp4" target="_blank">
-                        <h3>LEADER IN QUALITY <br/>FIRE RATED DUCT</h3></a>
-                </div>
-            </section>
-            <section class="front_thumbnails p-l-20 p-r-20">
-                <div class="col-sm-4 front_box_01 shadow m-r-20 m-b-20">
-                    <div class="video_icon">
-                        <a href="winduct_overview.html">
-                            <center><img alt="" class="m-b-20" src="images/winduct_overview.png"></center>
-                        </a>
-                    </div>
-                    <h6 class="block-title p-b-5"><strong>WinDuct</strong>® Overview</h6>
-                    <p><strong>WinDuct</strong>® is a fire rated smoke extraction ductwork system tested to British Standard BS476 Part 24 (Duct A and Duct B) and Australian Standard AS1530.4 (Duct A and Duct B) for 120 minutes stability, integrity and insulation.</p><span class="font-arial small-text col-sm-9 no-padding button-text text-white"><a href="winduct_overview.html">Read More</a></span></div>
-                <div class="col-sm-4 front_box_01 shadow m-r-20 m-b-20">
-                    <div class="video_icon">
-                        <a href="awards_recognitions.html">
-                            <center><img alt="" class="m-b-20" src="images/awards.png"></center>
-                        </a>
-                    </div>
-                    <h6 class="block-title p-b-5"><strong>Award & Recognition</strong></h6>
-                    <p><strong>WinDuct</strong>® is honored to be awarded and recognized by various agencies for its quality assurance and performance.</p><span class="font-arial small-text col-sm-9 no-padding button-text text-white"><a href="awards_recognitions.html">Read More</a></span></div>
-                <div class="col-sm-4 front_box_01 shadow m-r-20 m-b-20">
-                    <div class="video_icon">
-                        <a href="project_references_local.html">
-                            <center><img alt="" class="m-b-20" src="images/project_ref.png"></center>
-                        </a>
-                    </div>
-                    <h6 class="block-title p-b-5"><strong>Project References</strong></h6>
-                    <p><strong>WinDuct</strong>® System has been installed in commercial and government projects worldwide.</p><span class="font-arial small-text col-sm-9 no-padding button-text text-white"><a href="project_references_local.html">Read More</a></span></div>
-            </section>
+        <div class="front_page_background">
+          <section class="front_thumbnails p-l-20 p-r-20">
+            <div class="col-sm-12 m-r-20 m-t-20 m-b-20">
+              <!--start of card--><center>
+              <div class="card" id ="winductstory" style="width:100%!important;">
+
         </div>
+        </center><!--end of card-->
+
+
+              <div class="col-sm-12 m-r-20 m-t-20 m-b-20" id="winduct_overview_card">
+
+
+              </div>
+
+
+              <div class="col-sm-12 m-r-20 m-b-20" id="featuredproject">
+
+              </div>
+              <div class="col-sm-12 m-r-20 m-t-20 m-b-20" id="worlwidedist">
+
+              </div><!--end of div-->
+        </section>
         <section class="p-b-55 p-t-75 xs-p-b-20 bg-master-darker" id ="ftr"></section>
         </div>
+
+      </div>
         <script src="js/google.js" type="text/javascript"></script>
         <script src="js/pace.min.js" type="text/javascript"></script>
         <script type="text/javascript" src="js/pages.image.loader.js"></script>
