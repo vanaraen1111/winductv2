@@ -220,44 +220,7 @@
     <script type="text/javascript" async="" src="js/slideshow.js"></script>
        <script type="text/javascript" src="js/bootstrap.min.js"></script>
         <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-    <script>
 
-        // Next/previous controls
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-
-        // Thumbnail image controls
-        function currentSlide(n) {
-          showSlides(slideIndex = n);
-        }
-
-    //automated carousells - 2 sec
-        function showSlides() {
-          var i;
-          var slides = document.getElementsByClassName("mySlides");
-          var dots = document.getElementsByClassName("demo");
-          var captionText = document.getElementById("caption");
-
-          for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-          }
-          slideIndex++;
-          if (slideIndex > slides.length) {slideIndex = 1}
-          slides[slideIndex-1].style.display = "block";
-          dots[slideIndex-1].className += " active";
-          captionText.innerHTML = dots[slideIndex-1].alt;
-          setTimeout(showSlides, 10000); // Change image every 2 seconds
-        }
-
-    $(document).ready(function() {
-      $("#winductstory").load("winduct_story.html");
-      $("#winduct_overview_card").load("winduct_overview_card.html");
-      $("#worlwidedist").load("worldwide_distribution.html");
-      $("#featuredproject").load("featured_project.html").then(showSlides(0));
-    });
-
-    </script>
 
   </head><body class="pace-dark windows desktop pace-done"> <div class="pace pace-inactive"><div class="pace-progress" data-progress-text="100%" data-progress="99" style="width: 100%;"> <div class="pace-progress-inner"></div></div><div class="pace-activity"></div></div>
 
@@ -418,6 +381,48 @@
         <script type="text/javascript" src="js/jquery.unveil.min.js"></script>
         <script type="text/javascript" src="js/pages.frontend.js"></script>
         <script type="text/javascript" src="js/custom.js"></script>
+        <script>
+        let slideIndex = 0;
+
+        $(document).ready(function() {
+          $("#winductstory").load("winduct_story.html");
+          $("#winduct_overview_card").load("winduct_overview_card.html");
+          $("#worlwidedist").load("worldwide_distribution.html");
+          $("#featuredproject").load("featured_project.html");
+
+  showSlides(slideIndex = 0);
+        });
+
+
+
+
+function showSlides() {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+ var captionText = document.getElementById("caption");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  if (slideIndex > slides.length) {slideIndex = 1}
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+    slideIndex++;
+  setTimeout(showSlides, 5000); // Change image every 2 seconds
+}
+
+                    // Next/previous controls
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+
+                    // Thumbnail image controls
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+
+        </script>
 
 </body>
 
