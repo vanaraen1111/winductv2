@@ -75,7 +75,7 @@ body.pace-white .pace .pace-progress {
 }
 .header.transparent-light .menu>li>a {
     color:#2F2F2F;
-	text-shadow: 1px 1px 0.25px black !important; 
+	text-shadow: 1px 1px 0.25px black !important;
 }
 .header.transparent-light .menu>li>a:not(.btn) {
     color: #2F2F2F;
@@ -163,7 +163,7 @@ body.pace-white .pace .pace-progress {
 
 .header.transparent-dark .menu>li>a {
     color:#E1E1E1;
-	text-shadow: 1px 1px 4px black !important; 
+	text-shadow: 1px 1px 4px black !important;
 }
 
 .header.transparent-dark .menu>li>a:focus {
@@ -962,7 +962,7 @@ margin-top: 80px;}
 }
 .front_box {
 	min-height: 250px!important;
-/*	background-color: rgba(244,200,146,0.75) !important;   10% opaque red */  
+/*	background-color: rgba(244,200,146,0.75) !important;   10% opaque red */
 	box-shadow: 4px 4px 4px black;
 	float: left;
 	padding-left: 0px;
@@ -973,8 +973,8 @@ background: -moz-linear-gradient(top, #feedb1 0%, #feedb1 0%, #f9d19f 8%, #fcc27
 background: -webkit-linear-gradient(top, #feedb1 0%,#feedb1 0%,#f9d19f 8%,#fcc27b 90%,#f9d19f 95%,#feedb1 100%); /* Chrome10-25,Safari5.1-6 */
 background: linear-gradient(to bottom, #feedb1 0%,#feedb1 0%,#f9d19f 8%,#fcc27b 90%,#f9d19f 95%,#feedb1 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feedb1', endColorstr='#feedb1',GradientType=0 ); /* IE6-9 */
-	
-	
+
+
 }
 .front_box p {
 	padding-left: 15px;
@@ -992,11 +992,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#feedb1', end
 		padding-left: 15px;
 	padding-right: 15px;
 }
-	
+
 
 .front_box_01 {
 	min-height: 350px!important;
- /* 	background-color: rgba(186,32,38,0.75) !important; 10% opaque red */  
+ /* 	background-color: rgba(186,32,38,0.75) !important; 10% opaque red */
 	color:#black !important;
 	box-shadow: 4px 4px 4px black;
 	float: left;
@@ -1025,14 +1025,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff2ba', end
 }
 .front_box_02 {
 	min-height: 450px!important;
-	background-color: rgba(83,101,111,0.75) !important;  /* 10% opaque red */  
+	background-color: rgba(83,101,111,0.75) !important;  /* 10% opaque red */
 	color:#FFFFFF !important;
 	box-shadow: 4px 4px 4px black;
 	float: left;
 }
 .front_box_03 {
 	min-height: 450px!important;
-	background-color: rgba(101,132,192,0.75) !important;  /* 10% opaque red */  
+	background-color: rgba(101,132,192,0.75) !important;  /* 10% opaque red */
 	color:#FFFFFF !important;
 	box-shadow: 4px 4px 4px black;
 	float: left;
@@ -1040,7 +1040,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff2ba', end
 }
 .front_box_04 {
 	min-height: 300!important;
-	background-color: rgba(255,247,215,0.75) !important;  /* 10% opaque red */  
+	background-color: rgba(255,247,215,0.75) !important;  /* 10% opaque red */
 	color:#FFFFFF !important;
 	box-shadow: 4px 4px 4px black;
 	float: left;
@@ -1086,7 +1086,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fff2ba', end
 .why_photo {
 		width:95%;
 	float: left;
-	
+
 }
 .why_icon {
 	min-height: 250px;
@@ -1508,7 +1508,7 @@ width: 60%;
 .social_media {
 	float: right;
 	width: 40px;
-	
+
 }
 .desktop_version{
 	display:inherit;
@@ -2109,7 +2109,7 @@ h4 {
    -webkit-text-stroke-color: black;
     text-shadow: -5px 1px 2px black;
 	color:#ACACAC !important
-	
+
 }
 
 h5 {
@@ -2227,13 +2227,13 @@ ul.no-style, ol.no-style {
 
 
 ol.red_list {
-    counter-reset:item; 
-    margin:0; 
-    padding-left:0; 
+    counter-reset:item;
+    margin:0;
+    padding-left:0;
 }
 ol.red_list>li {
-    counter-increment:item; 
-    list-style:none inside; 
+    counter-increment:item;
+    list-style:none inside;
     margin: 15px 0;
     overflow: hidden;
     font-size: 16px !important;
@@ -2252,7 +2252,7 @@ ol.red_list>li:before {
     width: 25px;
     background: transparent;
     color: #FF0000;
-    text-align: center; 
+    text-align: center;
     float: left;
 }
 
@@ -2355,7 +2355,7 @@ hr.dotted {
 		width: 20%;
 		float: left;
 	padding-right: 2%;
-	
+
 
 
 }
@@ -2368,7 +2368,7 @@ hr.dotted {
 }
 .responsible_bottom_logo{
 		width: 20%;
-		float: left;	
+		float: left;
 
 }
 
@@ -4828,7 +4828,7 @@ fieldset[disabled] .btn-danger.active {
 	background-position: top;
 	height: 180px;
 }
-	
+
 .mobile_top_01 {
 	overflow: hidden;
 	width: 100%;
@@ -4838,7 +4838,7 @@ fieldset[disabled] .btn-danger.active {
 	background-position: top;
 	height: 180px;
 }
-	
+
 	.mobile_top_02 {
 	overflow: hidden;
 	width: 100%;
@@ -4848,8 +4848,8 @@ fieldset[disabled] .btn-danger.active {
 	background-position: top;
 	height: 180px;
 }
-	
-	
+
+
 .desktop_version{
 	display:none !important;
 	visibility:hidden !important;
@@ -4859,7 +4859,7 @@ fieldset[disabled] .btn-danger.active {
 	visibility: visible !important;
 }
 
-	
+
     .modal.fill-in .modal-dialog {
         width: calc(100% - 20px);
     }
@@ -4871,7 +4871,7 @@ fieldset[disabled] .btn-danger.active {
 }
 
 
-	
+
 }
 
 
@@ -6628,16 +6628,16 @@ input.error:-webkit-autofill:focus,
 }
 
 /* the images are positioned absolutely to stack. opacity transitions are animated. */
-.slides img { 
+.slides img {
   display: block;
-  position: absolute; 
+  position: absolute;
   transition: opacity 1s;
   opacity: 0;
   width: 100%;
 }
 
 /* the first image is the current slide. it's faded in. */
-.slides img:first-child { 
+.slides img:first-child {
   z-index: 2; /* frontmost */
   opacity: 1;
 }
@@ -6975,7 +6975,7 @@ input.error:-webkit-autofill:focus,
 .winduct_content {
     height: 220px !important;
 }
-	
+
     .day .card:first-child .col-md-4:first-child {
         width: 100%;
         margin-bottom: 20px;
@@ -9010,8 +9010,8 @@ sup.dollar {
     #demo-content-1 .inner {
         margin-top: -300px;
     }
-	
-	
+
+
 }
 
 @media only screen and (min-device-width: 640px) and (max-device-width: 960px) and (orientation: landscape) {
@@ -10348,7 +10348,6 @@ h1 {
 		float: right;
 		padding-left: 0px !important;
 		padding-right: 0 !important;
-		
+
 	}
 }
-
