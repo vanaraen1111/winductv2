@@ -1,5 +1,13 @@
 $(document).ready(function() {
+
             $("#ftr").load("footer.html",()=>{
+              var logoheight = $(".winlogo").height();
+              console.log("win logo height: "+ logoheight);
+              $(".about-us").css("padding-top",logoheight);
+              $(".sth").css("padding-top",logoheight);
+              $(".wind").css("padding-top",logoheight);
+              $(".ref").css("padding-top",logoheight);
+
               $(".currentYear").text(new Date().getFullYear());
           });
     'use strict';
