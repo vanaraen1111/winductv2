@@ -128,14 +128,22 @@
         /* Six columns side by side */
         .column {
          float: left;
-         width: 4.1%;
+         padding:0px;
+         width: 4.1666%;
          max-height: 100px;
         }
+
+
+      .column:first-child {
+        margin-left: 13px;
+      }
 
         /* Add a transparency effect for thumnbail images */
         .demo {
          opacity: 0.6;
         }
+
+
 
         .active,
         .demo:hover {
@@ -221,6 +229,8 @@
 
         .mySlides {
           background:black;
+          width:700px;
+          text-align:center;
         }
 
     </style>
@@ -401,6 +411,8 @@
             //currentSlide(1);
           //  $(".firstimg").trigger('click');
           });
+
+
         });
 
 function showSlides() {
